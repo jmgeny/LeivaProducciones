@@ -19,13 +19,16 @@ Route::get('index', function () {
     return view('inicio');
 });
 
-Route::get('evento',function(){
-	return view('eventos/evento');
-});
+Route::resource('eventos', 'EventoController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
