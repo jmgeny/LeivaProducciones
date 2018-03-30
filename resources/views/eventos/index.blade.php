@@ -1,7 +1,7 @@
 @extends('eventos.layouts')
 
 @section('content')
-	<article class="col-sm-8">
+	<article class="col-sm-10">
 		<h2>
 			Listado de Eventos
 			<a href="{{route('eventos.create')}}" class="btn btn-primary pull-right">Nuevo</a>
@@ -37,7 +37,7 @@
 		</table>
 		{{ $eventos->links() }}
 	</article>
-	<article class="col-sm-4 text-center">
+	<article class="col-sm-2 text-center">
 		@include('eventos.codigo.aside');
 	</article>
 @endsection

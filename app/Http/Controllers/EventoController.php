@@ -4,6 +4,8 @@ namespace Leivaproducciones\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Leivaproducciones\Evento;
+use Leivaproducciones\http\Requests\EventoRequest;
+
 
 class EventoController extends Controller
 {
@@ -28,7 +30,7 @@ class EventoController extends Controller
     {
         return view('eventos.create');
     }
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -72,9 +74,20 @@ class EventoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EventoRequest $request)
     {
-        //
+       $evento = new Evento;
+
+       $evento->nombre = $request->nombre;
+       $evento->fecha = $request->fecha;
+       $evento->direccion = $request->direccion;
+       $evento->ciudad_id = $request->ciudad_id;
+       $evento->descripcion = $request->descripcion;
+
+       $evento->save();
+
+       return redirect()->route('eventos.index')
+                        ->with('info','El evento fue Creado');
     }
 
     /**
@@ -84,9 +97,21 @@ class EventoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EventoRequest $request, $id)
     {
-        //
+       $evento = Evento::find($id);
+
+       $evento->nombre = $request->nombre;
+       $evento->fecha = $request->fecha;
+       $evento->direccion = $request->direccion;
+       $evento->ciudad_id = $request->ciudad_id;
+       $evento->descripcion = $request->descripcion;
+
+       $evento->save();
+
+       return redirect()->route('eventos.index')
+                        ->with('info','El evento fue modificado');
+
     }
 
 
