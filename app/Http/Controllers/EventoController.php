@@ -5,6 +5,7 @@ namespace Leivaproducciones\Http\Controllers;
 use Illuminate\Http\Request;
 use Leivaproducciones\Evento;
 use Leivaproducciones\http\Requests\EventoRequest;
+use Illuminate\Support\Facades\Storage;
 
 
 class EventoController extends Controller
@@ -16,7 +17,7 @@ class EventoController extends Controller
      */
     public function index()
     {
-        $eventos = Evento::orderBy('fecha','ASC')->paginate(5);
+        $eventos = Evento::orderBy('fecha','ASC')->paginate(6);
 
         return view('eventos.index',compact('eventos'));
     }
@@ -83,6 +84,12 @@ class EventoController extends Controller
        $evento->direccion = $request->direccion;
        $evento->ciudad_id = $request->ciudad_id;
        $evento->descripcion = $request->descripcion;
+       // imagen
+
+       if ($request->file('avatar')) {
+        $path = Storage::disk('public')->put('img', $request->file('avatar'));
+        $evento->fill(['avatar' => asset($path)]);
+           } 
 
        $evento->save();
 
@@ -106,6 +113,12 @@ class EventoController extends Controller
        $evento->direccion = $request->direccion;
        $evento->ciudad_id = $request->ciudad_id;
        $evento->descripcion = $request->descripcion;
+
+       // imagen
+       if ($request->file('avatar')) {
+        $path = Storage::disk('public')->put('img', $request->file('avatar'));
+        $evento->fill(['avatar' => asset($path)]);
+           } 
 
        $evento->save();
 

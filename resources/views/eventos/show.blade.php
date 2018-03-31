@@ -7,6 +7,7 @@
         <h3 class="card-title">{{ $evento->nombre}}
             <a href="{{route('eventos.index')}}" class="btn btn-primary pull-right">Listar</a>
         </h3>
+        <img src="{{ $evento->avatar}}" alt="imagen">
         <p class="card-text">{{ $evento->descripcion}}</p>
         <p class="card-text">{{ $evento->descripcion}}</p>
         <a href="{{ route('eventos.edit', $evento->id) }}" class="btn btn-primary pull-right">Editar</a>

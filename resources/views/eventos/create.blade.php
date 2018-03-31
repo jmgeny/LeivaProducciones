@@ -7,9 +7,11 @@
       <a href="{{route('eventos.index')}}" class="btn btn-primary pull-right">Listar</a>
     </h2>
     @include('eventos.codigo.info');
-    {!! Form::open(['route' => 'eventos.store']) !!}
+
+    {!! Form::open(['route' => 'eventos.store', 'files' => true]) !!}
       @include('eventos.codigo.form')
     {!! Form::close() !!}      
+
 	</article>
 	<article class="col-sm-2 text-center">
 		@include('eventos.codigo.aside');

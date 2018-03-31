@@ -28,6 +28,7 @@ class CreateEventosTable extends Migration
             $table->text('llegar_dormir')->nullable();//como llegal dormir
             $table->text('contacto')->nullable();//detalle de contacto
             $table->string('inscripcion')->nullable();//como inscribirce
+            $table->string('avatar')->nullable();//imagen del evento
 
             $table->timestamps();
         });

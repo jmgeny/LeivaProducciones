@@ -24,5 +24,10 @@
   </div>
 
   <div class="form-group">
+    {!! Form::label('avatar','Imagen') !!}
+    {!! Form::file('avatar') !!}
+  </div>
+
+  <div class="form-group">
     {!! Form::submit('Enviar',['class' => 'btn btn-primary']) !!}
   </div>    
