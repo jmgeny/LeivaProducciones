@@ -1,11 +1,10 @@
-<p class="alert alert-info">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque doloremque deleniti voluptate distinctio modi cumque animi pariatur facilis beatae! Animi aliquam dicta culpa odio provident amet, tempora voluptatum dolorem.
-</p>
-
-<ul class="nav flex-column">
+<ul class="nav flex-column text-left">
   <li class="nav-item">
-    <a class="nav-link active" href="{{route('eventos.index')}}">Listar</a>
+    <a class="nav-link active" href="{{route('eventos.index')}}">Evento</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="{{route('campeonatos.index')}}">Campeonatos</a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="{{ url('/') }}">Principal</a>
   </li>

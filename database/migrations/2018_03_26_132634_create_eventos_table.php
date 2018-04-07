@@ -16,19 +16,26 @@ class CreateEventosTable extends Migration
         Schema::create('eventos', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('nombre');//nombre del evento
-            $table->date('fecha');
-            $table->string('direccion');
-            $table->integer('ciudad_id')->nullable();//De la tabla ciudades
-            $table->text('descripcion')->nullable();//categorias, premios
-            $table->integer('campeonato_id')->nullable();//word cup, campeonato reg
-            $table->integer('deporte_list')->nullable();//Triatlon, duatlon, ateletismo
-            $table->integer('especialidad_id')->nullable();//short, standard, 100m, half
-            $table->text('cronograma')->nullable();//cronograma de actividades
-            $table->text('llegar_dormir')->nullable();//como llegal dormir
-            $table->text('contacto')->nullable();//detalle de contacto
-            $table->string('inscripcion')->nullable();//como inscribirce
-            $table->string('avatar')->nullable();//imagen del evento
+            $table->string('nombre');// ## Portada
+            $table->date('fecha');// ## Portada
+            $table->integer('ciudad_id')->nullable();// ## Portada
+
+            $table->string('inscripto');// ## Evento
+            $table->string('resultado');// ## Evento
+            
+            $table->integer('campeonato_id')->nullable();// ## Evento
+            $table->integer('deporte_id')->nullable();// ## Evento
+            $table->integer('especialidad_id')->nullable();// ## Evento
+            $table->text('descripcion')->nullable();// ## Evento 
+            $table->text('cronograma')->nullable();// ## Evento
+
+
+            $table->string('direccion');// Local Info
+            $table->text('llegar_dormir')->nullable();// ## Local Info
+
+            $table->text('contacto')->nullable();// Contacto
+            $table->string('inscripcion')->nullable();// Contacto
+            $table->string('avatar')->nullable();//
 
             $table->timestamps();
         });

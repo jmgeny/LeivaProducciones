@@ -1,4 +1,7 @@
-@extends('eventos.layouts')
+@extends('layouts.crud')
+
+@section('title', 'Crear Evento')
+@section('titulo', 'CRUD Eventos')
 
 @section('content')
 	<article class="col-sm-10">

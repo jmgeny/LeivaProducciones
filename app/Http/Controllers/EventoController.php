@@ -84,6 +84,15 @@ class EventoController extends Controller
        $evento->direccion = $request->direccion;
        $evento->ciudad_id = $request->ciudad_id;
        $evento->descripcion = $request->descripcion;
+       $evento->campeonato_id = $request->campeonato_id;
+       $evento->deporte_id = $request->deporte_id;
+       $evento->especialidad_id = $request->especialidad_id;
+       $evento->cronograma = $request->cronograma;
+       $evento->llegar_dormir = $request->llegar_dormir;
+       $evento->contacto = $request->contacto;
+       $evento->inscripcion = $request->inscripcion;
+       $evento->inscripto = $request->inscripto;
+       $evento->resultado = $request->resultado;
        // imagen
 
        if ($request->file('avatar')) {
@@ -113,6 +122,15 @@ class EventoController extends Controller
        $evento->direccion = $request->direccion;
        $evento->ciudad_id = $request->ciudad_id;
        $evento->descripcion = $request->descripcion;
+       $evento->campeonato_id = $request->campeonato_id;
+       $evento->deporte_id = $request->deporte_id;
+       $evento->especialidad_id = $request->especialidad_id;
+       $evento->cronograma = $request->cronograma;
+       $evento->llegar_dormir = $request->llegar_dormir;
+       $evento->contacto = $request->contacto;
+       $evento->inscripcion = $request->inscripcion;
+       $evento->inscripto = $request->inscripto;
+       $evento->resultado = $request->resultado;
 
        // imagen
        if ($request->file('avatar')) {

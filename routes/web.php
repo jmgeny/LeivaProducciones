@@ -19,7 +19,10 @@ Route::get('index', function () {
     return view('inicio');
 });
 
+// Route::get('inicio', 'PrincipalController@index');
+
 Route::resource('eventos', 'EventoController');
+Route::resource('campeonatos', 'CampeonatoController');
 
 Auth::routes();
 
