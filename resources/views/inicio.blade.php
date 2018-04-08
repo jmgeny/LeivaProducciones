@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -33,7 +32,31 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Leiva Producciones</a>
+        {{-- <a class="navbar-brand js-scroll-trigger" href="#page-top">LP</a> --}}
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+               <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fa fa-fw fa-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
+          </div>        
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -50,11 +73,13 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Nosotros</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#servicios">Servicios</a>
+            </li>            
+            <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
-        
       </div>
     </nav>
     <!-- Header -->
@@ -68,24 +93,7 @@
 
     <!-- Evento Section -->
     <section class="portfolio" id="portfolio">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Eventos</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/500x325" alt="Card image">
-              <div class="card-body">
-                <h4 class="card-title">Evento 1</h4>
-                <p class="card-text">Some example text.</p>
-                <a href="#" class="btn btn-primary">Ver Mas</a>
-              </div>
-            </div>            
-          </div>
-
-        </div>
-      </div>
+      @include('eventos');
     </section>
 
     <!-- Resultados Section -->
@@ -112,11 +120,16 @@
             <p class="lead">&nbsp;Organizaci&oacute;n de Circuitos&nbsp;de Freestyle  bikes Internacional, administraci&oacute;n y coordinaci&oacute;n&nbsp;de Natatorios, Clubes y  Playas.&nbsp;Contrataci&oacute;n de Personal Profesional. &nbsp;Tenemos en nuestra empresa todo  el soporte para alquiler de estructuras a todo tipo de empresas y entes  municipales, provinciales.</p>
           </div>
         </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fa fa-download mr-2"></i>
-            Download Now!
-          </a>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="portfolio bg-primary" id="servicios">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Servicios</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+              <h3>LEIMAN</h3>
         </div>
       </div>
     </section>
@@ -158,13 +171,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Dirección</h4>
             <p class="lead mb-0">2215 John Daniel Drive
               <br>Clark, MO 65243</p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Redes Sociales</h4>
-            <ul class="list-inline mb-0">
+{{--             <ul class="list-inline mb-0">
               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
                   <i class="fa fa-fw fa-facebook"></i>
@@ -185,15 +196,9 @@
                   <i class="fa fa-fw fa-whatsapp"></i>
                 </a>
               </li>
-{{--              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fa fa-fw fa-dribbble"></i>
-                </a>
-              </li> --}}
-            </ul>
+            </ul> --}}
           </div>
           <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">leivaproducciones.com.ar</h4>
             <p class="lead mb-0">Implementado con Laravel y Bootstrap
               <a href="http://genyparatriatlon.com.ar">Desarrollador</a>.</p>
           </div>

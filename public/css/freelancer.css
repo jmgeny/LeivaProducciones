@@ -368,6 +368,16 @@ a:focus, a:hover, a:active {
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  background-color: #1a252f;
+  background-color: #015289;
   border-color: #1a252f;
+}
+
+.btn-outline-light {
+  color: yellow;
+  border-color: yellow;
+}
+
+.btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active {
+  color:blue;
+  background-color: yellow;
 }
