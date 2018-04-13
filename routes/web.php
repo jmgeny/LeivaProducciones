@@ -15,21 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('index', function () {
-    return view('inicio');
-});
+// Route::get('index', function () {
+//     return view('inicio');
+// });
 
-// Route::get('inicio', 'PrincipalController@index');
+Route::get('index', 'PrincipalController@inicio');
 
 Route::resource('eventos', 'EventoController');
+
 Route::resource('campeonatos', 'CampeonatoController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('principal','PrincipalController@eventos');
