@@ -8973,3 +8973,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/*bootstrap 3*/
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}

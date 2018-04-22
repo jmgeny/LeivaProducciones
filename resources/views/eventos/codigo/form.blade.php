@@ -53,10 +53,10 @@
     {!! Form::textarea('contacto',null,['class' => 'form-control']) !!}
   </div>
 
-  <div class="form-group">
+{{--   <div class="form-group">
     {!! Form::label('avatar','Imagen') !!}
     {!! Form::file('avatar') !!}
-  </div>
+  </div> --}}
 
   <div class="form-group">
     {!! Form::label('inscripcion', 'Inscripción') !!}

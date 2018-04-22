@@ -20,7 +20,9 @@ class CreateCampeonatosTable extends Migration
             $table->integer('categoria_id');
             $table->integer('deporte_id');
             $table->date('fecha_inicio');
-            $table->date('fecha_fin');            
+            $table->date('fecha_fin');
+
+            $table->string('avatar')->nullable();//            
 
             $table->timestamps();
         });

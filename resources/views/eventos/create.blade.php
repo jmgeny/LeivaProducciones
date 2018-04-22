@@ -9,7 +9,7 @@
       Crear Evento
       <a href="{{route('eventos.index')}}" class="btn btn-primary pull-right">Listar</a>
     </h2>
-    @include('eventos.codigo.info');
+    @include('eventos.codigo.info')
 
     {!! Form::open(['route' => 'eventos.store', 'files' => true]) !!}
       @include('eventos.codigo.form')
@@ -17,6 +17,6 @@
 
 	</article>
 	<article class="col-sm-2 text-center">
-		@include('eventos.codigo.aside');
+		@include('eventos.codigo.aside')
 	</article>
 @endsection

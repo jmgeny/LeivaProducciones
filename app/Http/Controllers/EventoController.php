@@ -95,10 +95,10 @@ class EventoController extends Controller
        $evento->resultado = $request->resultado;
        // imagen
 
-       if ($request->file('avatar')) {
-        $path = Storage::disk('public')->put('img', $request->file('avatar'));
-        $evento->fill(['avatar' => asset($path)]);
-           } 
+       // if ($request->file('avatar')) {
+       //  $path = Storage::disk('public')->put('img', $request->file('avatar'));
+       //  $evento->fill(['avatar' => asset($path)]);
+       //     } 
 
        $evento->save();
 
@@ -132,11 +132,11 @@ class EventoController extends Controller
        $evento->inscripto = $request->inscripto;
        $evento->resultado = $request->resultado;
 
-       // imagen
-       if ($request->file('avatar')) {
-        $path = Storage::disk('public')->put('img', $request->file('avatar'));
-        $evento->fill(['avatar' => asset($path)]);
-           } 
+       // // imagen
+       // if ($request->file('avatar')) {
+       //  $path = Storage::disk('public')->put('img', $request->file('avatar'));
+       //  $evento->fill(['avatar' => asset($path)]);
+       //     } 
 
        $evento->save();
 

@@ -35,7 +35,7 @@ class CreateEventosTable extends Migration
 
             $table->text('contacto')->nullable();// Contacto
             $table->string('inscripcion')->nullable();// Contacto
-            $table->string('avatar')->nullable();//
+            // $table->string('avatar')->nullable();//
 
             $table->timestamps();
         });

@@ -1,5 +1,5 @@
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Eventos</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0"><a href="{{ route('eventos.index') }}">Eventos</a></h2>
         <hr class="star-dark mb-5">
         <div class="row">
       @foreach($eventos as $evento)

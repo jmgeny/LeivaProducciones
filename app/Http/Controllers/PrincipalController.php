@@ -13,7 +13,7 @@ class PrincipalController extends Controller
 
 	public function inicio() {
 
-		$eventos = Evento::orderBy('fecha','ASC')->paginate(6);
+		$eventos = Evento::orderBy('fecha','ASC')->paginate(3);
 
 		return view('inicio', compact('eventos'));
 	}
