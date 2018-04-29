@@ -19,3 +19,15 @@
 .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active {
   color: black;
 }
+
+.nav-pills, .tab-content {
+	border-style: groove;
+}
+
+.logo> a {
+	color: yellow;
+}
+
+.sec-prin {
+	padding-top: 4.5rem;
+}

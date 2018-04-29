@@ -20,10 +20,18 @@ Route::get('/', function () {
 // });
 
 Route::get('index', 'PrincipalController@inicio');
+Route::get('eventos', 'PrincipalController@events');
+Route::get('evento/{id}','PrincipalController@event');
 
-Route::resource('eventos', 'EventoController');
+// Route::resource('eventos', 'EventoController');
 
-Route::resource('campeonatos', 'CampeonatoController');
+// Route::resource('campeonatos', 'CampeonatoController');
+
+Route::resources([
+    'editEventos' => 'EventoController',
+    'editCampeonatos' => 'CampeonatoController'
+]);
+
 
 Auth::routes();
 

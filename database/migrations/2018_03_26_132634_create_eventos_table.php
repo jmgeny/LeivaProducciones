@@ -20,8 +20,8 @@ class CreateEventosTable extends Migration
             $table->date('fecha');// ## Portada
             $table->integer('ciudad_id')->nullable();// ## Portada
 
-            $table->string('inscripto');// ## Evento
-            $table->string('resultado');// ## Evento
+            $table->string('inscripto')->nullable();// ## Evento
+            $table->string('resultado')->nullable();// ## Evento
             
             $table->integer('campeonato_id')->nullable();// ## Evento
             $table->integer('deporte_id')->nullable();// ## Evento
@@ -29,8 +29,7 @@ class CreateEventosTable extends Migration
             $table->text('descripcion')->nullable();// ## Evento 
             $table->text('cronograma')->nullable();// ## Evento
 
-
-            $table->string('direccion');// Local Info
+            $table->string('direccion')->nullable();// Local Info
             $table->text('llegar_dormir')->nullable();// ## Local Info
 
             $table->text('contacto')->nullable();// Contacto

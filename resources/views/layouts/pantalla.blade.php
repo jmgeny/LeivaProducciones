@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/style_crud.css">
 </head>
 <body id="page-top">
-    
+  
     @yield('content')
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>

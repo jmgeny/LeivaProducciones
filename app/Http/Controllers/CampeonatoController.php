@@ -95,7 +95,7 @@ class CampeonatoController extends Controller
 
         $campeonato->save();
 
-       return redirect()->route('campeonatos.index')
+       return redirect()->route('editCampeonatos.index')
                         ->with('info','El campeonato fue Creado');        
     }
 
@@ -124,7 +124,7 @@ class CampeonatoController extends Controller
 
         $campeonato->save();
 
-       return redirect()->route('campeonatos.index')
+       return redirect()->route('editCampeonatos.index')
                         ->with('info','El campeonato fue Actualizado');   
 
     }

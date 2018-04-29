@@ -15,12 +15,12 @@
 
   <div class="form-group">
     {!! Form::label('categoria','Categoria') !!}
-    {!! Form::select('categoria_id',['1' => 'Campeonato Regional', '2' => 'Campeonato Nacional', '3' => 'Copa Mundo'],null,['class' => 'form-control']) !!}
+    {!! Form::select('categoria_id', \Leivaproducciones\Categoria::orderBy('nombre')->pluck('nombre','id') ,null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">
     {!! Form::label('deporte','Deporte') !!}
-    {!! Form::select('deporte_id',['1' => 'Triatlon', '2' => 'Duatlon', '3' => 'Corrida'],null,['class' => 'form-control']) !!}
+    {!! Form::select('deporte_id', \Leivaproducciones\Deporte::orderBy('nombre')->pluck('nombre', 'id') ,null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">

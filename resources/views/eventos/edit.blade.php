@@ -7,11 +7,11 @@
   <article class="col-sm-10">
     <h2>
       Crear Evento
-      <a href="{{route('eventos.index')}}" class="btn btn-primary pull-right">Listar</a>
+      <a href="{{route('editEventos.index')}}" class="btn btn-primary pull-right">Listar</a>
     </h2>
     @include('eventos.codigo.info')
 
-    {!! Form::model($evento, ['route' => ['eventos.update', $evento->id], 'method' =>'PUT', 'files' => true]) !!}
+    {!! Form::model($evento, ['route' => ['editEventos.update', $evento->id], 'method' =>'PUT', 'files' => true]) !!}
       @include('eventos.codigo.form')
     {!! Form::close() !!}      
 

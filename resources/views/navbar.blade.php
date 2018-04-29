@@ -1,5 +1,6 @@
       <div class="container">
         {{-- <a class="navbar-brand js-scroll-trigger" href="#page-top">LP</a> --}}
+        {{-- <a href="{{ url('/index') }}" class="btn btn-outline-light btn-social text-center">LP</a> --}}
           <div class="col-md-4 mb-5 mb-lg-0">
             <ul class="list-inline mb-0">
               <li class="list-inline-item">

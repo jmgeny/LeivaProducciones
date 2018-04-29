@@ -85,7 +85,7 @@
                 <div class="links">
                     <a href="{{ url('/') }}">Inicio</a>
                     <a href="{{ url('/index') }}">Index</a>
-                    <a href="{{ route('eventos.index') }}">Index Evento</a>
+                    <a href="{{ route('editEventos.index') }}">Index Evento</a>
 {{--                    <a href="https://forge.laravel.com">mail</a> --}}
                 </div>
             </div>

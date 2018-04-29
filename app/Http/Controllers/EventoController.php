@@ -17,7 +17,8 @@ class EventoController extends Controller
      */
     public function index()
     {
-        $eventos = Evento::orderBy('fecha','ASC')->paginate(6);
+        $eventos = Evento::orderBy('fecha','ASC')
+                  ->paginate(6);
 
         return view('eventos.index',compact('eventos'));
     }
@@ -102,7 +103,7 @@ class EventoController extends Controller
 
        $evento->save();
 
-       return redirect()->route('eventos.index')
+       return redirect()->route('editEventos.index')
                         ->with('info','El evento fue Creado');
     }
 
@@ -140,7 +141,7 @@ class EventoController extends Controller
 
        $evento->save();
 
-       return redirect()->route('eventos.index')
+       return redirect()->route('editEventos.index')
                         ->with('info','El evento fue modificado');
 
     }

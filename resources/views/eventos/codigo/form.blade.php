@@ -1,6 +1,6 @@
   <div class="form-group">
     {!! Form::label('campeonato','Campeonato') !!}
-    {!! Form::select('campeonato_id',['1' => '', '2' => 'Triatlon Serie', '3' => 'Duatlon Serie'],null,['class' => 'form-control']) !!}
+    {!! Form::select('campeonato_id',\Leivaproducciones\Campeonato::orderBy('nombre')->pluck('nombre','id'),null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">
@@ -20,17 +20,19 @@
 
   <div class="form-group">
     {!! Form::label('ciudad','Ciudad') !!}
-    {!! Form::select('ciudad_id',['1' => 'Bragado', '2' => 'Chascomus', '3' => 'Buenos Aires'],null,['class' => 'form-control']) !!}
+    {!! Form::select('ciudad_id',\Leivaproducciones\Ciudade::orderBy('name')->pluck('name','id')
+//    ['1' => 'Bragado', '2' => 'Chascomus', '3' => 'Buenos Aires']
+    ,null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">
     {!! Form::label('deporte','Deporte') !!}
-    {!! Form::select('deporte_id',['1' => 'Triatlon', '2' => 'Duatlon', '3' => 'Corrida'],null,['class' => 'form-control']) !!}
+    {!! Form::select('deporte_id',\Leivaproducciones\Deporte::orderBy('nombre')->pluck('nombre', 'id'),null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">
     {!! Form::label('especialidad','Especialidad') !!}
-    {!! Form::select('especialidad_id',['1' => 'Campeonato Regional', '2' => 'Campeonato Nacional', '3' => 'Copa Mundo'],null,['class' => 'form-control']) !!}
+    {!! Form::select('especialidad_id',\Leivaproducciones\Distancia::orderBy('id')->pluck('nombre', 'id'),null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">
