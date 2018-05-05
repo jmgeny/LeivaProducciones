@@ -1,4 +1,4 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
 @section('title', 'Ver Evento')
 @section('titulo', 'CRUD Eventos')
@@ -52,7 +52,7 @@
         <a href="{{route('editEventos.index')}}" class="btn btn-primary pull-right">Listar</a>
     </article>
     <article class="col-sm-2">
-        @include('eventos.codigo.aside')
+        {{-- @include('eventos.codigo.aside') --}}
     </article>
 @endsection
 {{-- 

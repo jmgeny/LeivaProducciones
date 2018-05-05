@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
+@section('title', 'Administrador')
+@section('titulo', 'Administrador')
+
 @section('content')
 <div class="container">
     <div class="row mt-5">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Administrador</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,10 +16,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
                 </div>
             </div>
+        </div>
+        <div class="col-md-2">
+            {{-- @include('eventos.codigo.aside') --}}
         </div>
     </div>
 </div>

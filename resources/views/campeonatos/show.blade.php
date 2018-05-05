@@ -1,4 +1,4 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
 @section('title', 'Ver Campeonato')
 @section('titulo', 'CRUD Campeonatos')
@@ -11,10 +11,10 @@
           </div>
           <div class="panel-body text-center">
               <img src="{{ $campeonato->avatar }}" class="img-thumbnail" alt="Cinque Terre">
-              <p class="card-text">Categoria: {{ $campeonato->categoria() }}</p>
-              <p class="card-text">Deporte: {{ $campeonato->deporte() }}</p>
-              <p class="card-text">Fecha de Inicio: {{ $campeonato->fecha_inicio }}</p>
-              <p class="card-text">Fecha de Fin: {{ $campeonato->fecha_fin }}</p>
+              <p class="card-text"><h4>Categoria</h4>{{ $campeonato->categoria->nombre }}</p>
+              <p class="card-text"><h4>Deporte</h4> {{ $campeonato->deporte->nombre }}</p>
+              <p class="card-text"><h4>Fecha de Inicio</h4>{{ $campeonato->fecha_inicio }}</p>
+              <p class="card-text"><h4>Fecha de Fin</h4>{{ $campeonato->fecha_fin }}</p>
           </div>
           <div class="panel-footer">
             <a href=" {{ route('editCampeonatos.edit', $campeonato->id) }}" class="btn btn-primary">Editar</a>
@@ -23,6 +23,6 @@
         </div>
     </section>
     <section class="col-sm-2">
-        @include('eventos.codigo.aside')
+        {{-- @include('eventos.codigo.aside') --}}
     </section>
 @endsection

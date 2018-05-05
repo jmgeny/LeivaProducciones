@@ -17,15 +17,12 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    
-    
-
    </head>
 
   <body id="page-top">
     
     <section class="container py-3">
+  
       <section class="row">
         <div class="col-sm-12">
           <h1 class="page-header text-center">@yield('titulo')</h1>

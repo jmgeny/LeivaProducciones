@@ -1,4 +1,4 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
 @section('title', 'Listado Campeonatos')
 @section('titulo', 'CRUD Campeonatos')
@@ -27,8 +27,8 @@
 				@foreach($campeonatos as $campeonato)
 				<tr>
 					<td>{{$campeonato->nombre}}</td>
-					<td>{{$campeonato->categoria_id}}</td>
-					<td>{{$campeonato->deporte_id}}</td>
+					<td>{{$campeonato->categoria->nombre}}</td>
+					<td>{{$campeonato->deporte->name}}</td>
 					<td>{{$campeonato->fecha_inicio}}</td>
 					<td>{{$campeonato->fecha_fin}}</td>
 					<td><a href="{{ route('editCampeonatos.show', $campeonato->id) }}" class="btn btn-primary">ver</a></td>
@@ -44,7 +44,7 @@
 		</table>		
 	</article>
 	<article class="col-sm-2">
-		@include('eventos.codigo.aside')
+		{{-- @include('eventos.codigo.aside') --}}
 	</article>
 @endsection
 

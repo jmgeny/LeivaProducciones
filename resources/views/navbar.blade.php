@@ -43,19 +43,30 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
             </li>
-{{--             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#servicios">Servicios</a>
-            </li> --}}
             <li class="dropdown nav-item mx-0 mx-lg-1">
-              <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded" data-toggle="dropdown" href="#">Leiman<span class="caret"></span>
+              <a class="dropdown-toggle nav-link py-3 px-0 px-lg-3 rounded" data-toggle="dropdown" href="#">Admin<span class="caret"></span>
               </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Chip</a></li>
-                <li><a href="#">Fotos</a></li>
-                <li><a href="#">Estructuras</a></li>
-              </ul>
-            </li>
-                        
+              @if (Auth::guest())
+                <ul class="dropdown-menu">
+                  <li><a href="{{route('login')}}">Ingresar</a></li>
+                  <li><a href="{{route('register')}}">Registrarse</a></li>
+                </ul>
+              @else
+                <ul class="dropdown-menu">
+                  <li><a href="{{ route('logout') }}" class="dropdown-item"
+                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    Salir
+                                </a></li>
+                  <li><a class="dropdown-item" href="{{url('/home')}}">Admin</a></li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
+                                    {{ csrf_field() }}
+                    </form>                  
+                </ul>
+              @endif
+
+             </li>            
+
           </ul>
         </div>
       </div>

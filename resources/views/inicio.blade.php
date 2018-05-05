@@ -21,18 +21,17 @@
         <hr class="star-dark mb-5">
         <div class="row">
       @foreach($eventos as $evento)
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title">{{$evento->nombre}}</h4>
               </div>
               <img class="card-img-top" src="{{$evento->campeonato->avatar}}" alt="Card image">
-              {{-- ir a imagen del campeonato --}}
               <div class="card-body">
                 <p class="card-text">{{$evento->fecha}} - {{$evento->direccion}}</p>
               </div>
               <div class="card-footer">
-                  <a href="{{ url('/evento') }}" class="btn btn-primary">Ver Mas</a>
+                  <a href="{{ url('/evento',$evento->id) }}" class="btn btn-primary">Ver Mas</a>
               </div>
             </div>            
           </div>        
@@ -49,20 +48,20 @@
         <hr class="star-dark mb-5">
         <div class="row">
       @foreach($resultados as $resultado)
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title">{{$resultado->nombre}}</h4>
               </div>
-              <img class="card-img-top" src="{{$evento->campeonato->avatar}}" alt="Card image">
+              <img class="card-img-top" src="{{$resultado->campeonato->avatar}}" alt="Card image">
               <div class="card-body">
                 <p class="card-text">{{$resultado->fecha}} - {{$resultado->direccion}}</p>
               </div>
               <div class="card-footer">
-                  <a href="{{ route('editEventos.show', $evento->id) }}" class="btn btn-primary">Ver Mas</a>
+                  <a href="{{ url('/evento',$resultado->id) }}" class="btn btn-primary">Ver Mas</a>
               </div>
             </div>            
-          </div>        
+          </div>       
       @endforeach
         </div>
       </div>      
@@ -74,9 +73,9 @@
     </section>
 
     <!-- Servicios -->
-    <section class="portfolio bg-primary" id="servicios">
+{{--     <section class="portfolio bg-primary" id="servicios">
       @include('servicios')
-    </section>
+    </section> --}}
 
     <!-- Contacto Section -->
     <section class="portfolio" id="contact">
@@ -88,19 +87,18 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
+          
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
-            <p class="lead mb-0">Juan Manuel Geny - 2018</p>
+              <p class="lead mb-0">Juan Manuel Geny - 2018</p>
           </div>
           <div class="col-md-4">
-            <p class="lead mb-0">Implementado con Laravel y Bootstrap
-              <a href="http://genyparatriatlon.com.ar">Desarrollador</a>.</p>
+
           </div>
         </div>
       </div>
     </footer>
+
     <div class="scroll-to-top d-lg-none position-fixed ">
       <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
         <i class="fa fa-chevron-up"></i>

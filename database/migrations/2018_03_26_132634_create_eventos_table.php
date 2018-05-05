@@ -25,7 +25,7 @@ class CreateEventosTable extends Migration
             
             $table->integer('campeonato_id')->nullable();// ## Evento
             $table->integer('deporte_id')->nullable();// ## Evento
-            $table->integer('especialidad_id')->nullable();// ## Evento
+            $table->integer('distancia_id')->nullable();// ## Evento
             $table->text('descripcion')->nullable();// ## Evento 
             $table->text('cronograma')->nullable();// ## Evento
 

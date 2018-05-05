@@ -21,7 +21,6 @@
   <div class="form-group">
     {!! Form::label('ciudad','Ciudad') !!}
     {!! Form::select('ciudad_id',\Leivaproducciones\Ciudade::orderBy('name')->pluck('name','id')
-//    ['1' => 'Bragado', '2' => 'Chascomus', '3' => 'Buenos Aires']
     ,null,['class' => 'form-control']) !!}
   </div>
 
@@ -31,8 +30,8 @@
   </div>
 
   <div class="form-group">
-    {!! Form::label('especialidad','Especialidad') !!}
-    {!! Form::select('especialidad_id',\Leivaproducciones\Distancia::orderBy('id')->pluck('nombre', 'id'),null,['class' => 'form-control']) !!}
+    {!! Form::label('distancia','Distancia') !!}
+    {!! Form::select('distancia_id',\Leivaproducciones\Distancia::orderBy('id')->pluck('nombre', 'id'),null,['class' => 'form-control']) !!}
   </div>
 
   <div class="form-group">

@@ -1,4 +1,4 @@
-@extends('layouts.crud')
+@extends('layouts.app')
 
 @section('title', 'Crear Campeonatos')
 @section('titulo', 'CRUD Campeonatos')
@@ -15,6 +15,6 @@
 
 </article>
 <article class="col-sm-2">
-	@include('eventos.codigo.aside')
+	{{-- @include('eventos.codigo.aside') --}}
 </article>
 @endsection

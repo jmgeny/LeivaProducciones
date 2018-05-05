@@ -11,15 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('index', function () {
 //     return view('inicio');
 // });
 
-Route::get('index', 'PrincipalController@inicio');
+Route::get('/', 'PrincipalController@inicio');
 Route::get('eventos', 'PrincipalController@events');
 Route::get('evento/{id}','PrincipalController@event');
 

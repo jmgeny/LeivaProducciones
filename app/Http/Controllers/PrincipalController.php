@@ -29,11 +29,11 @@ class PrincipalController extends Controller
 
 		$eventos = Evento::orderBy('fecha','ASC')
 					->where('fecha','>=',$fechaSistema)
-					->paginate(3);
+					->paginate(4);
 
 		$resultados = Evento::orderBy('fecha','DESC')
 					->whereNotNull('resultado')
-					->paginate(3);
+					->paginate(4);
 
 		$campeonatos = Campeonato::all();
 
