@@ -1,6 +1,6 @@
 <?php
 
-namespace Leivaproducciones\Console;
+namespace leiman\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Leivaproducciones\Http\Middleware;
+namespace leiman\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 

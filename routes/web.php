@@ -11,29 +11,10 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('index', function () {
-//     return view('inicio');
-// });
-
-Route::get('/', 'PrincipalController@inicio');
-Route::get('eventos', 'PrincipalController@events');
-Route::get('evento/{id}','PrincipalController@event');
-
-// Route::resource('eventos', 'EventoController');
-
-// Route::resource('campeonatos', 'CampeonatoController');
-
-Route::resources([
-    'editEventos' => 'EventoController',
-    'editCampeonatos' => 'CampeonatoController'
-]);
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-

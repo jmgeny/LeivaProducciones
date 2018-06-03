@@ -1,6 +1,6 @@
 <?php
 
-namespace Leivaproducciones\Http\Controllers;
+namespace leiman\Http\Controllers;
 
 use Illuminate\Http\Request;
 

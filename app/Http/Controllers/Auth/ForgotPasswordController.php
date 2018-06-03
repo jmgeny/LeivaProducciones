@@ -1,8 +1,8 @@
 <?php
 
-namespace Leivaproducciones\Http\Controllers\Auth;
+namespace leiman\Http\Controllers\Auth;
 
-use Leivaproducciones\Http\Controllers\Controller;
+use leiman\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

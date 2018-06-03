@@ -1,6 +1,6 @@
 <?php
 
-namespace Leivaproducciones\Providers;
+namespace leiman\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Leivaproducciones\Events\Event' => [
-            'Leivaproducciones\Listeners\EventListener',
+        'leiman\Events\Event' => [
+            'leiman\Listeners\EventListener',
         ],
     ];
 

@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'es',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,23 +107,6 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Logging Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the log settings for your application. Out of
-    | the box, Laravel uses the Monolog PHP logging library. This gives
-    | you a variety of powerful log handlers / formatters to utilize.
-    |
-    | Available Settings: "single", "daily", "syslog", "errorlog"
-    |
-    */
-
-    'log' => env('APP_LOG', 'single'),
-
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
     /*
     |--------------------------------------------------------------------------
@@ -164,7 +147,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-
         /*
          * Package Service Providers...
          */
@@ -172,17 +154,15 @@ return [
         /*
          * Application Service Providers...
          */
-        Leivaproducciones\Providers\AppServiceProvider::class,
-        Leivaproducciones\Providers\AuthServiceProvider::class,
-        // Leivaproducciones\Providers\BroadcastServiceProvider::class,
-        Leivaproducciones\Providers\EventServiceProvider::class,
-        Leivaproducciones\Providers\RouteServiceProvider::class,
+        leiman\Providers\AppServiceProvider::class,
+        leiman\Providers\AuthServiceProvider::class,
+        // leiman\Providers\BroadcastServiceProvider::class,
+        leiman\Providers\EventServiceProvider::class,
+        leiman\Providers\RouteServiceProvider::class,
 
-        /*
-         * Laravel Collective...
-         */
-
+        // ... Laravel Collective
         Collective\Html\HtmlServiceProvider::class,
+        // ...
 
     ],
 
@@ -233,9 +213,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // ... Laravel Collective
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-
+        // ...
 
     ],
 

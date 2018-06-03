@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Leivaproducciones\User::class,
+            'model' => leiman\User::class,
         ],
 
         // 'users' => [

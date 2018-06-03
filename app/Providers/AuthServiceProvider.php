@@ -1,6 +1,6 @@
 <?php
 
-namespace Leivaproducciones\Providers;
+namespace leiman\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'Leivaproducciones\Model' => 'Leivaproducciones\Policies\ModelPolicy',
+        'leiman\Model' => 'leiman\Policies\ModelPolicy',
     ];
 
     /**

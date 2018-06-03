@@ -1,6 +1,6 @@
 <?php
 
-namespace Leivaproducciones\Http\Middleware;
+namespace leiman\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
