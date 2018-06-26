@@ -1,0 +1,13 @@
+.bg-primary {
+  background-color: #2196f3 !important;
+}
+
+.secNav {
+  background-color: #015289 !important;
+}
+
+.secNav a {
+	color: white;
+	font-size: 2rem;
+	font-family: 'Montserrat';
+}

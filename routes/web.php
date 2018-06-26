@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/evento/{id}', 'PrincipalController@evento');
+Route::get('/allEventos', 'PrincipalController@allEventos');
+
+Route::get('/resultado/{id}', 'PrincipalController@resultado');
+Route::get('/allResultados', 'PrincipalController@allResultados');

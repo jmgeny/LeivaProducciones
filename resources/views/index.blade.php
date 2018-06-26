@@ -11,10 +11,10 @@
     @include('header')
 
     <!-- Eventos Grid Section -->
-    @include('evento')
+    @include('eventos')
 
     <!-- Resultados Section -->
-    @include('resultado')
+    @include('resultados')
 
     <!-- Contact Section -->
     @include('contacto')
