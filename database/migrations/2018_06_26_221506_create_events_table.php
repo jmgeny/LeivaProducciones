@@ -18,14 +18,14 @@ class CreateEventsTable extends Migration
 
             $table->string('nombre');// ## Portada
             $table->date('fecha');// ## Portada
-            $table->integer('ciudad_id')->nullable();// ## Portada
+            $table->integer('city_id')->nullable();// ## Portada
 
             $table->string('inscripto')->nullable();// ## Evento
             $table->string('resultado')->nullable();// ## Evento
             
-            $table->integer('campeonato_id')->nullable();// ## Evento
-            $table->integer('deporte_id')->nullable();// ## Evento
-            $table->integer('distancia_id')->nullable();// ## Evento
+            $table->integer('championship_id')->nullable();// ## Evento
+            $table->integer('sport_id')->nullable();// ## Evento
+            $table->integer('specification_id')->nullable();// ## Evento
             $table->text('descripcion')->nullable();// ## Evento 
             $table->text('cronograma')->nullable();// ## Evento
 

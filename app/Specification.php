@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace leiman;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Campeonato extends Model
+class Specification extends Model
 {
     //
 }

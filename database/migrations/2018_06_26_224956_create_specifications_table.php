@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCampeonatosTable extends Migration
+class CreateSpecificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateCampeonatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('campeonatos', function (Blueprint $table) {
+        Schema::create('specifications', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->string('name');
             $table->string('nombre');
-            $table->integer('categoria_id');
-            $table->integer('deporte_id');
-            $table->date('fecha_inicio');
-            $table->date('fecha_fin');
-            $table->string('avatar')->nullable();
-                        
+            //Long distanc, media dist, Paratriatlon            
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ class CreateCampeonatosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('campeonatos');
+        Schema::dropIfExists('specifications');
     }
 }

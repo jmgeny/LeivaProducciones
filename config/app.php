@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        leiman\Providers\AppServiceProvider::class,
+        leiman\Providers\AuthServiceProvider::class,
+        // leiman\Providers\BroadcastServiceProvider::class,
+        leiman\Providers\EventServiceProvider::class,
+        leiman\Providers\RouteServiceProvider::class,
 
         // ...
         Collective\Html\HtmlServiceProvider::class,
