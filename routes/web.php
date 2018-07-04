@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/','PrincipalController@index');
 
 Route::get('/evento/{id}', 'PrincipalController@evento');
 Route::get('/allEventos', 'PrincipalController@allEventos');

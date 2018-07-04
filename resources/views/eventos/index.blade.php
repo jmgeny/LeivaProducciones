@@ -17,6 +17,7 @@
 		<table class="table">
 			<thead>
 				<tr>
+					<th>Campeonato</th>
 					<th>Nombre</th>
 					<th>Fecha</th>
 					<th>Ciudad</th>
@@ -29,13 +30,11 @@
 			<tbody>
 				@foreach($eventos as $evento)
 				<tr>
+					<td>{{ $evento->championship->nombre }}</td>
 					<td>{{$evento->nombre}}</td>
 					<td>{{$evento->fecha}}</td>
-					{{-- <td>{{$evento->ciudad->name}}</td> --}}
-					<td>ciudad</td>
-					{{-- {{ dd($evento->ciudad->name)}} --}}
-					<td>Deprote</td>
-					{{-- <td>{{$evento->deporte->nombre}}</td> --}}
+					<td>{{$evento->city->nombre}}</td>
+					<td>{{$evento->sport->nombre}}</td>
 					<td><a href="{{ route('event.show', $evento->id) }}" class="btn btn-primary">ver</a></td>
 					<td><a href=" {{ route('event.edit', $evento->id) }}" class="btn btn-primary">Editar</a></td>
 					<td><form action="{{ route('event.destroy',$evento->id) }}" method="POST">

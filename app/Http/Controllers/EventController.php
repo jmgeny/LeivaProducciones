@@ -52,6 +52,7 @@ class EventController extends Controller
      * @param  \leiman\Event  $event
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
         $evento = Event::find($id);
@@ -75,7 +76,7 @@ class EventController extends Controller
         $evento->direccion = $request->direccion;
         $evento->city_id = $request->city_id;
         $evento->descripcion = $request->descripcion;
-        $evento->campeonato_id = $request->campeonato_id;
+        $evento->championship_id = $request->championship_id;
         $evento->sport_id = $request->sport_id;
         $evento->specification_id = $request->specification_id;
         $evento->cronograma = $request->cronograma;
@@ -89,8 +90,8 @@ class EventController extends Controller
         $result = $request->file("resultado");//$evento->resultado = $request->resultado;
 
         // Armo un nombre único para este archivo
-        $namelista = $request->fecha . "-" . $evento->id . "-" . "lista." . $lista->extension();
-        $nameresult = $request->fecha . "-" . $evento->id . "-" . "result." . $result->extension();
+        $namelista = $request->fecha . "-lista" . "-" . $evento->id . "." . $lista->extension();
+        $nameresult = $request->fecha . "-result" . "-" . $evento->id . "." . $result->extension();
 
         $folder = "archivos";
         
@@ -101,6 +102,7 @@ class EventController extends Controller
         $evento->inscripto = $pathl;
         $evento->resultado = $path2;
 
+        
         $evento->save();
 
        return redirect()->route('event.index')
@@ -132,7 +134,7 @@ class EventController extends Controller
         $evento->direccion = $request->direccion;
         $evento->city_id = $request->city_id;
         $evento->descripcion = $request->descripcion;
-        $evento->campeonato_id = $request->campeonato_id;
+        $evento->championship_id = $request->championship_id;
         $evento->sport_id = $request->sport_id;
         $evento->specification_id = $request->specification_id;
         $evento->cronograma = $request->cronograma;
@@ -146,8 +148,8 @@ class EventController extends Controller
         $result = $request->file("resultado");//$evento->resultado = $request->resultado;
 
         // Armo un nombre único para este archivo
-        $namelista = $request->fecha . "-" . $evento->id . "-" . "lista." . $lista->extension();
-        $nameresult = $request->fecha . "-" . $evento->id . "-" . "result." . $result->extension();
+        $namelista = $request->fecha . "-lista" . "-" . $evento->id . "." . $lista->extension();
+        $nameresult = $request->fecha . "-result" . "-" . $evento->id . "." . $result->extension();
 
         $folder = "archivos";
         

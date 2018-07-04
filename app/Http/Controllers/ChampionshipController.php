@@ -119,9 +119,11 @@ class ChampionshipController extends Controller
      * @param  \leiman\Championship  $championship
      * @return \Illuminate\Http\Response
      */
-    public function show(Championship $championship)
+    public function show($id)
     {
-        //
+        $campeonato = Championship::find($id);
+
+        return view('campeonatos.show',compact('campeonato'));
     }
 
     /**

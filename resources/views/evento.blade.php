@@ -12,8 +12,8 @@
 	<section class="row">
 	  <article class="col-sm-8">
 	      <div>
-	        <h4>Nombre</h4>
-	        <i class="fa fa-calendar"></i> Fecha - Ciudad
+	        <h4>{{ $evento->nombre }}</h4>
+	        <i class="fa fa-calendar"></i> {{ $evento->fecha }} - {{ $evento->city->nombre }}
 	        <a href="{{ url('/allEventos') }}" class="btn btn-primary pull-right">Lista</a>        
 	      </div>
 
@@ -23,35 +23,35 @@
 		  <li><a data-toggle="tab" href="#menu2">Contacto</a></li>
 		</ul>
 
-		<div class="tab-content">
+		<div class="tab-content text-center">
 		  <div id="home" class="tab-pane fade in active">
 			  	<div class="row text-center">
-			  		<div class="col-sm-6"><h4><a href="#"></a>Inscriptos</h4></div>
-			  		<div class="col-sm-6"><h4><a href="#"></a>Resultados</h4></div>
+			  		<div class="col-sm-6 panel panel-default"><h4><a href="#"></a>Inscriptos</h4></div>
+			  		<div class="col-sm-6 panel panel-default"><h4><a href="#"></a>Resultados</h4></div>
 			  	</div>
-		            <h6>Campeonato</h6>
-		            {{-- <p>{{$evento->campeonato->nombre}}</p> --}}
-		            <h6>Deporte</h6>
-		            {{-- <p>{{$evento->deporte->name}}</p> --}}
-		            <h6>Distancia</h6>
-		            {{-- <p>{{$evento->distancia->nombre}}</p> --}}
-		            <h6>Detalles</h6>
-		            {{-- <p>{{$evento->descripcion}}</p> --}}
-		            <h6>Cronograma</h6>
-		            {{-- <p>{{$evento->cronograma}}</p>			  				  	 --}}
+		            <h4>Campeonato</h4>
+		            <p>{{$evento->championship->nombre}}</p>
+		            <h4>Deporte</h4>
+		            <p>{{$evento->sport->nombre}}</p>
+		            <h4>Distancia</h4>
+		            <p>{{$evento->specification->nombre}}</p>
+		            <h4>Detalles</h4>
+		            <p>{{$evento->descripcion}}</p>
+		            <h4>Cronograma</h4>
+		            <p>{{$evento->cronograma}}</p>			  				  	
 		  </div>
 		  <div id="menu1" class="tab-pane fade">
-            <h6>Dirección</h6>
-            {{-- <p>{{$evento->direccion}}</p> --}}
-            <h6>Sugerencias</h6>
-            {{-- <p>{{$evento->llegar_dormir}}</p> --}}
+            <h4>Dirección</h4>
+            <p>{{$evento->direccion}}</p>
+            <h4>Sugerencias</h4>
+            <p>{{$evento->llegar_dormir}}</p>
 
 		  </div>
 		  <div id="menu2" class="tab-pane fade">
-            <h6>Contacto</h6>
-            {{-- <p>{{$evento->contacto}}</p> --}}
-            <h6>Inscripción</h6>
-            {{-- <p>{{$evento->inscripcion}}</p> --}}
+            <h4>Contacto</h4>
+            <p>{{$evento->contacto}}</p>
+            <h4>Inscripción</h4>
+            <p>{{$evento->inscripcion}}</p>
 		  </div>
 		</div>
 

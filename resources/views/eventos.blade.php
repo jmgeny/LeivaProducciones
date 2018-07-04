@@ -2,16 +2,17 @@
       <div class="container">
         <a href="{{ url('/allEventos') }}"><h2 class="text-center text-uppercase text-secondary mb-4">Eventos</h2></a>
         <div class="row">
+            @foreach($eventos as $evento)
           <div class="col-md-6 col-lg-4">
-            <a class="evento-item d-block mx-auto" href="{{ url('/evento',1) }}">
-              <div class="evento-item-caption d-flex position-absolute h-100 w-100">
-                <div class="evento-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
+            <a class="evento-item d-block mx-auto" href="{{ url('/evento',$evento->id) }}">
+              <div class="panel panel-default">
+                <div class="panel-heading">{{ $evento->nombre }}</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-footer">Panel Footer</div>
               </div>
-              <img class="img-fluid" src="img/evento/cabin.png" alt="">
             </a>
-          </div>
+            </div>
+            @endforeach
         </div>
       </div>
     </section>

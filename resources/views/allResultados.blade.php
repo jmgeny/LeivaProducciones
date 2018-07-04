@@ -12,14 +12,17 @@
 <section class="row">
 	<section class="col-sm-8">
 		<section class="row">
-			{{-- aca va el foreach --}}
-			<a href="{{ url('/resultado') }}">
-				<article class="panel panel-default col-md-6 col-lg-4">
-					<div class="panel-heading">Panel Heading</div>
-					<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nisi commodi sequi incidunt, consectetur sed recusandae odit facere. Quae perspiciatis facere impedit eligendi ut obcaecati aut explicabo accusantium doloremque deserunt!</div>
-					<div class="panel-footer">Panel Footer</div>
-				</article>
-			</a>
+            @foreach($resultados as $resultado)
+          <div class="col-md-6 col-lg-4">
+            <a class="evento-item d-block mx-auto" href="{{ url('/evento',$resultado->id) }}">
+              <div class="panel panel-default">
+                <div class="panel-heading">{{ $resultado->nombre }}</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-footer">Panel Footer</div>
+              </div>
+            </a>
+          </div>
+            @endforeach
 		</section>
 	</section>
 
