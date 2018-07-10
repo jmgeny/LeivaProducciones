@@ -12,14 +12,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
 
-{{-- Font Awesome Icons --}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS 4-->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/freelancer.css" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    {{-- iconos de botones --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -27,12 +30,17 @@
 
 	@yield('content')
 
+  
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+    <!-- Plugin JavaScript -->
+    <script src="../jquery/jquery.easing.min.js"></script>
+    <script src="../jquery/jquery.magnific-popup.min.js"></script>
 
+    <!-- Custom scripts for this template -->
+    <script src="../js/freelancer.js"></script>
 </body>
 </html>

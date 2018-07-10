@@ -1,6 +1,6 @@
-@extends('layouts.vistas')
+@extends('layouts.admin')
 
-@section('title','Un Evento')
+@section('title','Ver Evento')
 
 @section('content')
 	<section class="container-fluid">
@@ -9,7 +9,7 @@
 	
 	<section class="container">
 		<section class="row">
-			<section class="col-sm-10">
+			<section class="col-sm-12">
         <h2>{{ $evento->nombre}}</h2>
         <p>{{ $evento->fecha}} - {{$evento->city->nombre}}</p>
 
@@ -31,9 +31,7 @@
 		<a href="{{ route('event.edit', $evento->id) }}" class="btn btn-primary">Editar</a>
         <a href="{{route('event.index')}}" class="btn btn-primary pull-right">Listar</a>
 			</section>
-			<section class="col-sm-2">
-				
-			</section>
+
 		</section>
 	</section>	
 

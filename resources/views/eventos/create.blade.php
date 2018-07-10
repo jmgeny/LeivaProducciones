@@ -1,6 +1,6 @@
-@extends('layouts.vistas')
+@extends('layouts.admin')
 
-@section('title','Editar Un Evento')
+@section('title','Crear Evento')
 
 @section('content')
 	<section class="container-fluid">
@@ -9,7 +9,7 @@
 	
 	<section class="container">
 		<section class="row">
-			<section class="col-sm-10">
+			<section class="col-sm-12">
 			    <h2>
 			      Nuevo Evento
 			      <a href="{{route('event.index')}}" class="btn btn-primary pull-right">Listar</a>
@@ -20,9 +20,6 @@
       @include('eventos.codigo.form')
     {!! Form::close() !!}  
 
-			</section>
-			<section class="col-sm-2">
-				
 			</section>
 		</section>
 	</section>	

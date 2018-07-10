@@ -1,6 +1,6 @@
-@extends('layouts.vistas')
+@extends('layouts.admin')
 
-@section('title','Un Evento')
+@section('title','Ver Campeonato')
 
 @section('content')
 	<section class="container-fluid">

@@ -1,6 +1,6 @@
-@extends('layouts.vistas')
+@extends('layouts.admin')
 
-@section('title','Todos Eventos')
+@section('title','Todos los Eventos')
 
 @section('content')
 <section class="container-fluid">
@@ -8,7 +8,7 @@
 </section>
 <section class="container">
 	<section class="row">
-		<section class="col-sm-10">
+		<section class="col-sm-12">
 		<h2>
 			Listado de Evento
 			<a href="{{ route('event.create') }}" class="btn btn-primary pull-right">Nuevo</a>
@@ -46,9 +46,6 @@
 				@endforeach				
 			</tbody>
 		</table>
-		</section>
-		<section class="col-sm-2">
-			Lateral
 		</section>
 	</section>
 </section>

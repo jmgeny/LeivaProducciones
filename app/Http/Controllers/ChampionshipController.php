@@ -49,6 +49,7 @@ class ChampionshipController extends Controller
         $campeonato->fecha_inicio = $request->fecha_inicio;
         $campeonato->fecha_fin = $request->fecha_fin;        
 
+        if ($request->file("avatar")) {
         // Necesito el archivo en una variable esta vez
         $avatar = $request->file("avatar");// $evento->inscripto = $request->inscripto;
 
@@ -61,6 +62,7 @@ class ChampionshipController extends Controller
 
         // Puedo igual guardarlo en base de datos...
         $campeonato->avatar = $path;
+        }
 
         $campeonato->save();
 

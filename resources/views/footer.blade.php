@@ -10,7 +10,7 @@
             <h4 class="text-uppercase mb-4">Contacto</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" target="new" href="https://www.facebook.com/www.leiman">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>

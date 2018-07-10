@@ -1,4 +1,4 @@
-@extends('layouts.vistas')
+@extends('layouts.admin')
 
 @section('title','Editar Campeonato')
 
