@@ -88,17 +88,27 @@ class EventController extends Controller
         $folder = "archivos";
 
         if ($request->file("inscripto")) {
-            $lista = $request->file("inscripto");// $evento->inscripto = $request->inscripto;
-            $namelista = $request->fecha . "-lista" . "-" . $evento->id . "." . $lista->extension();
-            $pathl = $lista->storePubliclyAs($folder, $namelista);
-            $evento->inscripto = $pathl;
+
+            // Necesito el archivo en una variable esta vez
+            $file = $request->file("inscripto");
+            // Armo un nombre único para este archivo
+            $name = $evento->fecha . "inscripto." . $file->extension();
+            $path = $file->storePubliclyAs($folder, $name);
+            // Puedo igual guardarlo en base de datos...
+            $evento->inscripto = $path;
+
         }
   
         if ($request->file("resultado")) {
-            $result = $request->file("resultado");//$evento->resultado = $request->resultado;
-            $nameresult = $request->fecha . "-result" . "-" . $evento->id . "." . $result->extension();
-            $path2 = $result->storePubliclyAs($folder, $nameresult);
-            $evento->resultado = $path2;
+
+            // Necesito el archivo en una variable esta vez
+            $file = $request->file("resultado");
+            // Armo un nombre único para este archivo
+            $name = $evento->fecha . "resultado." . $file->extension();
+            $path = $file->storePubliclyAs($folder, $name);
+            // Puedo igual guardarlo en base de datos...
+            $evento->resultado = $path;
+
         }
         
         $evento->save();
@@ -143,17 +153,27 @@ class EventController extends Controller
         // Guardar archivo
         $folder = "archivos";
         if ($request->file("inscripto")) {
-            $lista = $request->file("inscripto");// $evento->inscripto = $request->inscripto;
-            $namelista = $request->fecha . "-lista" . "-" . $evento->id . "." . $lista->extension();
-            $pathl = $lista->storePubliclyAs($folder, $namelista);
-            $evento->inscripto = $pathl;
-        }
 
+            // Necesito el archivo en una variable esta vez
+            $file = $request->file("inscripto");
+            // Armo un nombre único para este archivo
+            $name = $evento->fecha . "inscripto." . $file->extension();
+            $path = $file->storePubliclyAs($folder, $name);
+            // Puedo igual guardarlo en base de datos...
+            $evento->inscripto = $path;
+
+        }
+  
         if ($request->file("resultado")) {
-            $result = $request->file("resultado");//$evento->resultado = $request->resultado;
-            $nameresult = $request->fecha . "-result" . "-" . $evento->id . "." . $result->extension();
-            $path2 = $result->storePubliclyAs($folder, $nameresult);
-            $evento->resultado = $path2;
+
+            // Necesito el archivo en una variable esta vez
+            $file = $request->file("resultado");
+            // Armo un nombre único para este archivo
+            $name = $evento->fecha . "resultado." . $file->extension();
+            $path = $file->storePubliclyAs($folder, $name);
+            // Puedo igual guardarlo en base de datos...
+            $evento->resultado = $path;
+
         }
 
         // Puedo igual guardarlo en base de datos...

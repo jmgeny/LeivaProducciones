@@ -8,7 +8,7 @@
 </section>
 <section class="container">
 	<section class="row">
-		<section class="col-sm-10">
+		<section class="col-sm-12">
 			    <h2>
 			      Nuevo Campeonato
 			      <a href="{{route('championship.index')}}" class="btn btn-primary pull-right">Listar</a>
@@ -19,9 +19,7 @@
 			      @include('campeonatos.codigo.form')
 			    {!! Form::close() !!}  
 		</section>
-		<section class="col-sm-2">
-			<h4>Lateral</h4>
-		</section>
+
 	</section>
 </section>
 		

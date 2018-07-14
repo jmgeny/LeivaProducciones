@@ -9,7 +9,7 @@
 	
 	<section class="container">
 		<section class="row">
-			<section class="col-sm-10">
+			<section class="col-sm-12">
 		    <h2>
 		      Ver Campeonato
 		      <a href="{{route('championship.index')}}" class="btn btn-primary pull-right">Listar</a>
@@ -30,9 +30,6 @@
 				</div>				
 			</div>
         	</section>
-			<section class="col-sm-2">
-				
-			</section>
 		</section>
 	</section>	
 

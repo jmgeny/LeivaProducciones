@@ -50,18 +50,14 @@ class ChampionshipController extends Controller
         $campeonato->fecha_fin = $request->fecha_fin;        
 
         if ($request->file("avatar")) {
-        // Necesito el archivo en una variable esta vez
-        $avatar = $request->file("avatar");// $evento->inscripto = $request->inscripto;
-
-        // Armo un nombre único para este archivo
-        $name = $campeonato->id . "-" . $request->nombre . "." . $avatar->extension();
-
-        $folder = "imagen";
-        
-        $path = $avatar->storePubliclyAs($folder, $name);
-
-        // Puedo igual guardarlo en base de datos...
-        $campeonato->avatar = $path;
+            $folder = "img";
+            // Necesito el archivo en una variable esta vez
+            $file = $request->file("avatar");
+            // Armo un nombre único para este archivo
+            $name = $campeonato->fecha_inicio . "campeonato." . $file->extension();
+            $path = $file->storePubliclyAs($folder, $name);
+            // Puedo igual guardarlo en base de datos...
+            $campeonato->avatar = $path;
         }
 
         $campeonato->save();
@@ -97,17 +93,16 @@ class ChampionshipController extends Controller
         $campeonato->fecha_fin = $request->fecha_fin;        
 
         // Necesito el archivo en una variable esta vez
-        $avatar = $request->file("avatar");// $evento->inscripto = $request->inscripto;
-
-        // Armo un nombre único para este archivo
-        $name = $campeonato->id . "-" . $request->nombre . "." . $avatar->extension();
-
-        $folder = "imagen";
-        
-        $path = $avatar->storePubliclyAs($folder, $name);
-
-        // Puedo igual guardarlo en base de datos...
-        $campeonato->avatar = $path;
+        if ($request->file("avatar")) {
+            $folder = "img";
+            // Necesito el archivo en una variable esta vez
+            $file = $request->file("avatar");
+            // Armo un nombre único para este archivo
+            $name = $campeonato->fecha_inicio . "campeonato." . $file->extension();
+            $path = $file->storePubliclyAs($folder, $name);
+            // Puedo igual guardarlo en base de datos...
+            $campeonato->avatar = $path;
+        }
         
         $campeonato->save();
 

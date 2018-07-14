@@ -8,7 +8,7 @@
 </section>
 <section class="container">
 	<section class="row">
-		<section class="col-sm-10">
+		<section class="col-sm-12">
 			<h2>
 				Listado de Campeonatos
 				<a href="{{ route('championship.create') }}" class="btn btn-primary pull-right">Nuevo</a>
@@ -26,6 +26,7 @@
 					<th>Ver</th>
 					<th>Editar</th>
 					<th>Eliminar</th>
+					<th>Agregar Evento</th>
 				</tr>	
 			</thead>
 			<tbody>
@@ -45,14 +46,12 @@
 							<input type="hidden" name="_method" value="DELETE">
 							<button class="btn btn-danger">Borrar</button>
 						</form></td>
+					<td><a href="{{ route('event.create') }}" class="btn btn-primary">Evento</a></td>
 				</tr>
 				@endforeach				
 			</tbody>
 		</table>
 		
-		</section>
-		<section class="col-sm-2">
-			<h4>Lateral</h4>
 		</section>
 	</section>
 </section>
