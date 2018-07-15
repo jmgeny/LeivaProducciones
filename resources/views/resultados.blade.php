@@ -6,9 +6,9 @@
           <div class="col-md-6 col-lg-4">
             <a class="evento-item d-block mx-auto" href="{{ url('/evento',$resultado->id) }}">
               <div class="card">
-                <img class="card-img-top" src="{{ asset($resultado->championship->avatar) }}" alt="Card image">
-                <div class="card-body">
                   <h4 class="card-title">{{ $resultado->nombre }}</h4>
+                <img class="card-img-top" src="{{ asset('storage/' . $resultado->championship->avatar) }}" alt="Card image">
+                <div class="card-body">
                   <p class="card-text">{{ $resultado->city->nombre }} - {{ $resultado->fecha }}</p>
                 </div>
               </div>    

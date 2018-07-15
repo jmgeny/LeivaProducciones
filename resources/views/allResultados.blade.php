@@ -8,15 +8,15 @@
 </section>
 
 <section class="container">
-	<h2>Resultados</h2>
+	<h2>Todos los Resultados</h2>
 <section class="row">
-	<section class="col-sm-8">
-		<section class="row">
+	<article class="col-sm-8">
+		{{-- <section class="row" style="background-color: red"> --}}
             @foreach($resultados as $resultado)
-          <div class="col-md-6 col-lg-4">
-            <a class="evento-item d-block mx-auto" href="{{ url('/resultado',$resultado->id) }}">
+          <div class="col-md-6 col-lg-4 divEvento">
+            <a class="evento-item d-block mx-auto" href="{{ url('/evento',$resultado->id) }}">
               <div class="card">
-                <img class="card-img-top" src="img/img_avatar1.png" alt="Card image">
+                <img class="card-img-top" src="{{ asset('storage/' . $resultado->championship->avatar) }}" alt="Card image">
                 <div class="card-body">
                   <h4 class="card-title">{{ $resultado->nombre }}</h4>
                   <p class="card-text">{{ $resultado->city->nombre }} - {{ $resultado->fecha }}</p>
@@ -25,16 +25,14 @@
             </a>
           </div>
             @endforeach
-		</section>
-	</section>
+		{{-- </section> --}}
+	</article>
 
-	<section class="col-sm-4">
+	<aside class="col-sm-4">
 		@include('aside')
-	</section>
+	</aside>
 
 </section>	
 </section> {{--container --}}
-
-
 
 @endsection

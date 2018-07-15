@@ -1,5 +1,6 @@
 body {
   font-family: 'Lato';
+  background-color: #e6f6d6;
 }
 
 h1,
@@ -56,10 +57,16 @@ section {
   padding: 3rem 0; /*6rem*/
 }
 
+section .row {
+  padding: 0rem;
+}
+
 section h2 {
   font-size: 2.25rem;
   line-height: 2rem;
 }
+
+
 
 @media (min-width: 992px) {
   section h2 {
@@ -103,6 +110,7 @@ section h2 {
 
 #mainNav .navbar-brand {
   color: #fff;
+  display: none;
 }
 
 #mainNav .navbar-nav {
@@ -228,6 +236,11 @@ header.masthead h2 {
   .evento .evento-item {
     margin-bottom: 30px;
   }
+
+  #mainNav .navbar-brand {
+    display: inline;
+  }
+
 }
 
 .evento-modal .evento-modal-dialog {
@@ -264,7 +277,9 @@ header.masthead h2 {
   .evento-modal .evento-modal-dialog h2 {
     font-size: 3rem;
   }
+
 }
+
 
 .floating-label-form-group {
   position: relative;
@@ -388,6 +403,3 @@ a:focus, a:hover, a:active {
 
 /*NUEVO*/
 
-#mainNav {
-  font-size: 2rem;
-}

@@ -50,7 +50,7 @@ class ChampionshipController extends Controller
         $campeonato->fecha_fin = $request->fecha_fin;        
 
         if ($request->file("avatar")) {
-            $folder = "img";
+            $folder = "public/img";
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo

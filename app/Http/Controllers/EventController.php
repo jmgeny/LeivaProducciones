@@ -85,7 +85,7 @@ class EventController extends Controller
         $evento->inscripcion = $request->inscripcion;
 
         // Guardar archivo
-        $folder = "archivos";
+        $folder = "public/archivos";
 
         if ($request->file("inscripto")) {
 
@@ -151,7 +151,8 @@ class EventController extends Controller
         $evento->inscripcion = $request->inscripcion;
 
         // Guardar archivo
-        $folder = "archivos";
+        $folder = "public/archivos";
+        
         if ($request->file("inscripto")) {
 
             // Necesito el archivo en una variable esta vez

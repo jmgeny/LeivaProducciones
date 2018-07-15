@@ -1,6 +1,6 @@
 @extends('layouts.vistas')
 
-@section('title','Eventos')
+@section('title','Evento')
 
 @section('content')
 <section class="container-fluid">
@@ -16,7 +16,7 @@
       </div>  
       <div class="row">
         <div class="col-md-4">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset('storage/' . $evento->championship->avatar) }}" alt="">
         </div>
         <div class="col-md-8">
           <h2>{{ $evento->nombre }}</h2>

@@ -5,6 +5,7 @@
           Menu
           <i class="fa fa-bars"></i>
         </button>
+        @include('redes')
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
