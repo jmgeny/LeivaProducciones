@@ -15,6 +15,7 @@
 			      <a href="{{route('event.index')}}" class="btn btn-primary pull-right">Listar</a>
 			    </h2>
 			    @include('eventos.codigo.info')
+			    @include('extras.error')
 
     {!! Form::model($evento, ['route' => ['event.update', $evento->id], 'method' =>'PUT', 'files' => true]) !!}
       @include('eventos.codigo.form')

@@ -4,16 +4,20 @@
         <div class="row">
             @foreach($resultados as $resultado)
           <div class="col-md-6 col-lg-4">
-            <a class="evento-item d-block mx-auto" href="{{ url('/evento',$resultado->id) }}">
-              <div class="card">
-                  <h4 class="card-title">{{ $resultado->nombre }}</h4>
-                <img class="card-img-top" src="{{ asset('storage/' . $resultado->championship->avatar) }}" alt="Card image">
+            <a class="evento-item d-block" href="{{ url('/evento',$resultado->id) }}">
+              
+               <div class="card text-center">
+                  <div class="card-title">
+                    <p class="card-text">{{ $resultado->nombre }}</p>
+                    <p class="card-text">{{ $resultado->city->nombre }} - {{ $resultado->fecha }}</p>
+                  </div>
                 <div class="card-body">
-                  <p class="card-text">{{ $resultado->city->nombre }} - {{ $resultado->fecha }}</p>
+                  <img class="card-img-top" src="{{ Storage::url($resultado->championship->avatar) }}" alt="img">
                 </div>
-              </div>    
+              </div>
+
             </a>
-          </div>
+            </div>
             @endforeach
         </div>
       </div>

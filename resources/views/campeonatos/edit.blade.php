@@ -13,7 +13,8 @@
 		      Editar Campeonato
 		      <a href="{{route('championship.index')}}" class="btn btn-primary pull-right">Listar</a>
 		    </h2>
-		    @include('campeonatos.codigo.error')
+		    @include('extras.error')
+		    @include('eventos.codigo.info')
 		    {!! Form::model($campeonato, ['route' => ['championship.update', $campeonato->id], 'method' =>'PUT', 'files' => true]) !!}
 		      @include('campeonatos.codigo.form')
 		    {!! Form::close() !!}

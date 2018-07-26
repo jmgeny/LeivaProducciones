@@ -17,7 +17,8 @@ class CreateProvincesTable extends Migration
             $table->increments('id');
 
             $table->string('nombre');
-            $table->string('country_id');
+            $table->string('cod_prov');
+            $table->string('cod_country');
 
             $table->timestamps();
         });

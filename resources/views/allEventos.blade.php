@@ -16,7 +16,7 @@
           <div class="col-md-6 col-lg-4 divEvento">
             <a class="evento-item d-block mx-auto" href="{{ url('/evento',$evento->id) }}">
               <div class="card">
-                <img class="card-img-top" src="{{ asset('storage/' . $evento->championship->avatar) }}" alt="Card image">
+                <img class="card-img-top" src="{{ Storage::url($evento->championship->avatar) }}" alt="Card image">
                 <div class="card-body">
                   <h4 class="card-title">{{ $evento->nombre }}</h4>
                   <p class="card-text">{{ $evento->city->nombre }} - {{ $evento->fecha }}</p>

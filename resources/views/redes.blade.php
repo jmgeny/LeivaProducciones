@@ -5,11 +5,11 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/leimanjorge/?hl=es-la" target="new">
                   <i class="fa fa-instagram"></i>
                 </a>
               </li>
-              <li class="list-inline-item">
+{{--               <li class="list-inline-item">
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
                   <i class="fa fa-twitter"></i>
                 </a>
@@ -18,5 +18,5 @@
                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
                   <i class="fa fa-linkedin"></i>
                 </a>
-              </li>
+              </li> --}}
             </ul>

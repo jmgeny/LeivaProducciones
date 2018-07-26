@@ -6,3 +6,4 @@
         <h2 class="font-weight-light mb-0">Organizamos todo tipo de evento deportivo</h2>
     </div>
 </header>
+	@include('carrusel')

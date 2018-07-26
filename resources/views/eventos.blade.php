@@ -1,17 +1,21 @@
     <section class="evento" id="evento">
       <div class="container">
-        <a href="{{ url('/allEventos') }}"><h2 class="text-center text-uppercase text-secondary mb-4">Eventos</h2></a>
+        <a href="{{ url('/allEventos') }}"><h2 class="text-center text-uppercase text-secondary mb-4">Próximos Eventos</h2></a>
         <div class="row">
             @foreach($eventos as $evento)
           <div class="col-md-6 col-lg-4">
-            <a class="evento-item d-block mx-auto" href="{{ url('/evento',$evento->id) }}">
-              <div class="card">
-                  <h4 class="card-title">{{ $evento->nombre }}</h4>
-                <img class="card-img-top" src="{{ asset('storage/' . $evento->championship->avatar) }}" alt="img">
+            <a class="evento-item d-block" href="{{ url('/evento',$evento->id) }}">
+              
+               <div class="card text-center">
+                  <div class="card-title">
+                    <p class="card-text">{{ $evento->nombre }}</p>
+                    <p class="card-text">{{ $evento->city->nombre }} - {{ $evento->fecha }}</p>
+                  </div>
                 <div class="card-body">
-                  <p class="card-text">{{ $evento->city->nombre }} - {{ $evento->fecha }}</p>
+                  <img class="card-img-top" src="{{ Storage::url($evento->championship->avatar) }}" alt="img">
                 </div>
-              </div> 
+              </div>
+
             </a>
             </div>
             @endforeach

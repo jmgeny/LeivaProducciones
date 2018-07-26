@@ -4,6 +4,7 @@ namespace leiman\Http\Controllers;
 
 use leiman\Championship;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ChampionshipController extends Controller
 {
@@ -50,11 +51,12 @@ class ChampionshipController extends Controller
         $campeonato->fecha_fin = $request->fecha_fin;        
 
         if ($request->file("avatar")) {
+            
             $folder = "public/img";
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo
-            $name = $campeonato->fecha_inicio . "campeonato." . $file->extension();
+            $name = $campeonato->fecha_inicio . "-campeonato." . $file->extension();
             $path = $file->storePubliclyAs($folder, $name);
             // Puedo igual guardarlo en base de datos...
             $campeonato->avatar = $path;
@@ -94,11 +96,11 @@ class ChampionshipController extends Controller
 
         // Necesito el archivo en una variable esta vez
         if ($request->file("avatar")) {
-            $folder = "img";
+            $folder = "public/img";
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo
-            $name = $campeonato->fecha_inicio . "campeonato." . $file->extension();
+            $name = $campeonato->fecha_inicio . "-campeonato." . $file->extension();
             $path = $file->storePubliclyAs($folder, $name);
             // Puedo igual guardarlo en base de datos...
             $campeonato->avatar = $path;

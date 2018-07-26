@@ -4,6 +4,7 @@ namespace leiman\Http\Controllers;
 
 use leiman\Event;
 use Illuminate\Http\Request;
+use leiman\Http\Requests\EventRequest;
 
 class EventController extends Controller
 {
@@ -67,7 +68,7 @@ class EventController extends Controller
      * @param  \leiman\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EventRequest $request, $id)
     {
         $evento = Event::find($id);
 
@@ -133,7 +134,7 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
         $evento = new Event;
 
