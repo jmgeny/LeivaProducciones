@@ -10,26 +10,17 @@
 
     <title>@yield('title')</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap Core CSS -->
+    {{-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <!-- Custom Fonts -->
+    {{-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">     --}}
+    <link rel="stylesheet" href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-
-{{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> --}}
-    <!-- Bootstrap core CSS 4-->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/freelancer.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/leiman.css">
-    
-    {{-- iconos de botones --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Plugin CSS -->
-    {{-- <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"> --}}
-    {{-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> --}}
+        <!-- Custom CSS -->
+    <link href="{{ asset('css/stylish-portfolio.css') }}" rel="stylesheet">
 
   </head>
 
@@ -37,28 +28,19 @@
     
       @yield('content')
    
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-
-    <div class="scroll-to-top d-lg-none position-fixed ">
-      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-      </a>
-    </div>
-
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>    
     <!-- Bootstrap core JavaScript -->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="jquery/jquery.easing.min.js"></script>
-    <script src="jquery/jquery.magnific-popup.min.js"></script>
+        <!-- Plugin JavaScript -->
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-    <!-- Contact Form JavaScript -->
-    {{-- <script src="js/jqBootstrapValidation.js"></script> --}}
-    {{-- <script src="js/contact_me.js"></script> --}}
-
-    <!-- Custom scripts for this template -->
-    <script src="js/freelancer.js"></script>
+        <!-- Custom scripts for this template -->
+    <script src="{{ asset('js/stylish-portfolio.min.js') }}"></script>
 
   </body>
 

@@ -33,6 +33,7 @@ class PrincipalController extends Controller
     	return view('evento',compact('evento'));
     }
 
+
     public function allEventos() {
         
         $fechaSistema = new \DateTime();

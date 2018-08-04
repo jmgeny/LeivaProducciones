@@ -1,11 +1,11 @@
-@extends('layouts.admin')
+@extends('layouts.principal')
 
 @section('title','Crear Campeonato')
 
 @section('content')
-<section class="container-fluid">
+
 		@include('navbarAdmin')
-</section>
+		
 <section class="container">
 	<section class="row">
 		<section class="col-sm-12">

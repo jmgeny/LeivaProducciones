@@ -22,6 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/','PrincipalController@index');
 
 Route::get('/evento/{id}', 'PrincipalController@evento');
+// Route::get('/resultado/{id}', 'PrincipalController@resultado');
+
 Route::get('/allEventos', 'PrincipalController@allEventos');
 
 Route::get('/resultado/{id}', 'PrincipalController@resultado');

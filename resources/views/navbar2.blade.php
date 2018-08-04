@@ -1,4 +1,30 @@
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="{{ url('/') }}">LEIMAN</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="{{ url('/allEventos') }}">Eventos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="{{ url('/allResultados') }}">Resultados</a>
+        </li>
+{{--
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Inicio</a>
+        </li>
+         <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li> --}}
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contacto</a>
+        </li>
+      </ul>
+    </nav>      
+{{--     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">LEIMAN</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,22 +46,4 @@
           </ul>
         </div>
       </div>
-    </nav>
-{{-- <nav class="navbar secNav">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="{{ url('/') }}">LEIMAN</a>
-    </div>
-    <div class="collapse navbar-collapse pull-right" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="{{ url('/allEventos') }}">Eventos</a></li>
-        <li><a href="{{ url('/allResultados') }}">Resultados</a></li>
-      </ul>
-    </div>
-  </div>
-</nav> --}}
+    </nav> --}}

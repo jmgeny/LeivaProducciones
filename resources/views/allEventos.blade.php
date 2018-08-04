@@ -1,38 +1,38 @@
 @extends('layouts.principal')
 
-@section('title','Eventos')
+@section('title','Todos los Eventos')
 
 @section('content')
-<section class="container-fluid">
-    @include('navbar2')
-</section>
 
-<section class="container">
-  <h2>Todos los Eventos</h2>
-<section class="row">
-  <article class="col-sm-8">
-    {{-- <section class="row" style="background-color: red"> --}}
-            @foreach($eventos as $evento)
-          <div class="col-md-6 col-lg-4 divEvento">
-            <a class="evento-item d-block mx-auto" href="{{ url('/evento',$evento->id) }}">
-              <div class="card">
-                <img class="card-img-top" src="{{ Storage::url($evento->championship->avatar) }}" alt="Card image">
-                <div class="card-body">
-                  <h4 class="card-title">{{ $evento->nombre }}</h4>
-                  <p class="card-text">{{ $evento->city->nombre }} - {{ $evento->fecha }}</p>
-                </div>
-              </div>
+  @include('navbar2')
+  <h1 class="titulo"><a href="{{ url('/') }}">LEIMAN</a></h1>
+
+    <section class="container-fluid">
+      {{-- <div class="container"> --}}
+
+  <section class="row">
+    <section class="col-sm-8">
+        <div class="row no-gutters">
+          @foreach($eventos as $evento)
+          <div class="col-lg-4">
+                  <h2>{{ $evento->nombre }}</h2>
+                  <p class="mb-0 pCaption">{{ $evento->city->nombre }} - {{ $evento->fecha }}</p>
+            <a class="portfolio-item" href="{{ url('/evento',$evento->id) }}">
+              <span class="caption">
+                <span class="caption-content">
+                  <p class="pCaption">ver detalle</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="{{ Storage::url($evento->championship->avatar) }}" alt="">
             </a>
           </div>
-            @endforeach
-    {{-- </section> --}}
-  </article>
-
-  <aside class="col-sm-4">
-    @include('aside')
-  </aside>
-
-</section>  
-</section> {{--container --}}
-
+          @endforeach
+        </div>      
+    </section>
+    <aside class="col-sm-4">
+      @include('carrusel')
+    </aside>
+  </section>
+</section>
+ @include('contacto')
 @endsection
