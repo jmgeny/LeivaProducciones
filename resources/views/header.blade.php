@@ -1,12 +1,3 @@
-{{-- <header class="masthead bg-header text-white text-center">
-	<div class="container">
-		<img class="mb-0 imgHeader mx-auto" src="img/logoLeiman.png" alt="">
-        <h1 class="text-uppercase mb-0">Leiva Producciones</h1>
-        <h2 class="font-weight-light mb-0">Organizamos todo tipo de evento deportivo</h2>
-    </div>
-</header>
-	@include('carrusel') --}}
-
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
@@ -18,7 +9,6 @@
         </h3>
       </div>
         @include('redes')
-        {{-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.facebook.com/www.leiman">Facebook</a> --}}
       </div>
       <div class="overlay"></div>
     </header>

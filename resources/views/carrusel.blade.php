@@ -1,6 +1,3 @@
-
-  {{-- <div class="row text-center carrousel bg-primary"> --}}
-    <!-- div.col-md-6 col-lg-4 -->
       <div class="col-sm-6 col-md-4 col-lg-3 p-1">
         <a href="https://www.semanainternacionaldeltriatlon.com/" target="new">
           <img src="{{ asset('img/sponsor/semanDelTriatlon.png') }}" class="rounded" alt="UAI">
@@ -20,5 +17,4 @@
         <a href="https://www.facebook.com/blancobikes-132208506868037/" target="new">
           <img src="{{ asset('img/sponsor/blancoBike.png') }}" class="rounded" alt="blancoBike.png">
         </a>
-      </div>      
-  {{-- </div>   --}}
+      </div>    
