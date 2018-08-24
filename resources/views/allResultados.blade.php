@@ -17,7 +17,7 @@
           <div class="col-lg-4">
                   <h2>{{ $evento->nombre }}</h2>
                   <p class="mb-0 pCaption">{{ $evento->city->nombre }} - {{ $evento->fecha }}</p>
-            <a class="portfolio-item" href="{{ url('/evento',$evento->id) }}">
+            <a class="portfolio-item" href="{{ url('/resultado',$evento->id) }}">
               <span class="caption">
                 <span class="caption-content">
                   <p class="pCaption">ver detalle</p>

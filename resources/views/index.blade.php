@@ -6,9 +6,9 @@
 
     @include('header')
 
-{{--     @include('eventos')
+    @include('eventos')
 
-    @include('resultados') --}}
+    @include('resultados')
 
     @include('contacto')
 

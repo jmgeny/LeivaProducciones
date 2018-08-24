@@ -1,12 +1,11 @@
-@extends('layouts.principal')
+@extends('layouts.admin')
 
 @section('title','Editar Evento')
 
 @section('content')
 
-		@include('navbarAdmin')
-		
-	
+		{{-- @include('navadmin') --}}
+
 	<section class="container">
 		<section class="row">
 			<section class="col-sm-12">

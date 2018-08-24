@@ -7,12 +7,19 @@
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-
+<link rel="shortcut icon" type="image/x-icon" href="img/logoLeiman.ico">
 
 </head>
 <body>
 
-	@yield('content')
+        <div class="row">
+            <div class="col-sm-2">
+                @include('navadmin')                
+            </div>
+            <div class="col-sm-10">
+                @yield('content')
+            </div>
+        </div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">

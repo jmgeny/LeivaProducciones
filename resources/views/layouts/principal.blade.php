@@ -22,6 +22,8 @@
         <!-- Custom CSS -->
     <link href="{{ asset('css/stylish-portfolio.css') }}" rel="stylesheet">
 
+    <link rel="shortcut icon" type="image/x-icon" href="img/logoLeiman.ico">
+
   </head>
 
   <body id="page-top">

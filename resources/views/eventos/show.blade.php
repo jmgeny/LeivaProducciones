@@ -1,10 +1,10 @@
-@extends('layouts.principal')
+@extends('layouts.admin')
 
 @section('title','Ver Evento')
 
 @section('content')
 	
-		@include('navbarAdmin')
+		{{-- @include('navadmin') --}}
 
 	
 	<section class="container">

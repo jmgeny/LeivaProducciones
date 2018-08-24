@@ -8,7 +8,7 @@
           <a class="js-scroll-trigger" href="#page-top">LEIMAN</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
+          <a class="js-scroll-trigger" href="#page-top">Inicio</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#evento">Eventos</a>

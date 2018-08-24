@@ -33,6 +33,11 @@ class PrincipalController extends Controller
     	return view('evento',compact('evento'));
     }
 
+    public function resultado($id) {
+
+        $evento = Event::find($id);
+        return view('resultado',compact('evento'));
+    }
 
     public function allEventos() {
         
@@ -43,14 +48,9 @@ class PrincipalController extends Controller
                     ->where('fecha','>=',$fechaSistema)
                     ->paginate(9);
 
-    	return view('allEventos',compact('eventos'));
+        return view('allEventos',compact('eventos'));
     }
 
-    public function resultado($id) {
-
-        $resultado = Event::find($id);
-    	return view('resultado',compact('resultado'));
-    }
 
     public function allResultados () {
         $fechaSistema = new \DateTime();
