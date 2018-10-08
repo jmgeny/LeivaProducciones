@@ -19,7 +19,6 @@ class CreateCategoriesTable extends Migration
             $table->string('name');
             $table->string('nombre');
 //Continantal chapionship, Paratriatlon word cup, etc
-            $table->timestamps();
         });
     }
 

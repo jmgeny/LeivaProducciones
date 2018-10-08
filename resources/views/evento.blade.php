@@ -36,12 +36,12 @@
               @endif
             </div>
           </div>
-          <p><h4>Deporte: </h4>{{ $evento->sport->nombre }}</p>
-          <p><h4>Distancia:</h4> {{ $evento->specification->nombre }}</p>
-          <p><h4>Descrición:</h4> {{ $evento->descripcion }}</p>
-          <p><h4>Otros datos</h4> {{ $evento->cronograma }}</p>
-          <p><h4>Dierección:</h4> {{ $evento->direccion }}</p>
-          <p><h4>Mas datos:</h4> {{ $evento->llegar_dormir }}</p>
+          <p>{{ $evento->sport->nombre }}</p>
+          <p>{{ $evento->specification->nombre }}</p>
+          <p>{{ $evento->descripcion }}</p>
+          <p>{{ $evento->cronograma }}</p>
+          <p>{{ $evento->direccion }}</p>
+          <p>{{ $evento->llegar_dormir }}</p>
           <h3> <a href="mailto:{{ $evento->contacto }}">{{ $evento->contacto }}</a></h3>
         </div>
       </div>

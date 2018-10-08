@@ -405,3 +405,8 @@ a:hover, a:focus, a:active {
   color: black;
   font-size: 1.5rem;
 }
+
+.spanCaption {
+  color: black;
+  font-size: 3rem !important;
+}

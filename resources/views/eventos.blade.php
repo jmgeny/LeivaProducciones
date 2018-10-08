@@ -12,7 +12,7 @@
             <a class="portfolio-item" href="{{ url('/evento',$evento->id) }}">
               <span class="caption">
                 <span class="caption-content">
-                  <p class="pCaption">ver detalle</p>
+                  <p class="spanCaption">Inscribite</p>
                 </span>
               </span>
               <img class="img-fluid" src="{{ Storage::url($evento->championship->avatar) }}" alt="">
