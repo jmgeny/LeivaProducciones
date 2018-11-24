@@ -29,3 +29,5 @@ Route::get('/allResultados', 'PrincipalController@allResultados');
 
 Route::resource('event','EventController');
 Route::resource('championship','ChampionshipController');
+
+Route::post('send','mailController@send');

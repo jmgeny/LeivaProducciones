@@ -19,7 +19,15 @@ class CreateAtletasTable extends Migration
             $table->string('nombre');
             $table->string('dni');
             $table->string('email');
+            $table->string('direccion');
             $table->date('nacimiento');
+            $table->string('genero');
+            $table->string('telefono');
+            $table->string('avatar');
+            // pais
+            // provincia
+            // ciudad
+            // equipo
             $table->timestamps();
         });
     }

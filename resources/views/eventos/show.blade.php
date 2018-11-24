@@ -14,19 +14,26 @@
         <p>{{ $evento->fecha}} - {{$evento->city->nombre}}</p>
 
 <ul class="list-group">
-        <li class="list-group-item"><h4>Campeonato:</h4> {{ $evento->championship->nombre}}</li>
-        <li class="list-group-item"><h4>Deporte:</h4> {{ $evento->sport->nombre}}</li>
-        <li class="list-group-item"><h4>Especialidad:</h4> {{ $evento->specification->nombre}}</li>
-
-        <li class="list-group-item"><h4>Descripción:</h4> {{ $evento->descripcion}}</li>
-        <li class="list-group-item"><h4>Cronograma:</h4> {{ $evento->cronograma}}</li>
-		<li class="list-group-item"><h4>Direccion:</h4> {{ $evento->direccion}}</li>
-		<li class="list-group-item"><h4>Como llegar y donde dormir:</h4> {{ $evento->llegar_dormir}}</li>
-
-		<li class="list-group-item"><h4>Contacto:</h4> {{ $evento->contacto}}</li>
-
-        <li class="list-group-item"><h4>Inscriptos:</h4> {{ $evento->inscripto}}</li>
-        <li class="list-group-item"><h4>Resultados:</h4> {{ $evento->resultado}}</li>
+	<strong>Campeonato:</strong>
+        <li class="list-group-item">{{ $evento->championship->nombre}}</li>
+    <strong>Deporte:</strong>    
+        <li class="list-group-item">{{ $evento->sport->nombre}}</li>
+    <strong>Especialidad:</strong>
+        <li class="list-group-item">{{ $evento->specification->nombre}}</li>
+	<strong>Descripción:</strong>
+        <li class="list-group-item">{{ $evento->descripcion}}</li>
+    <strong>Cronograma:</strong>    
+        <li class="list-group-item">{{ $evento->cronograma}}</li>
+    <strong>Direccion:</strong>    
+		<li class="list-group-item">{{ $evento->direccion}}</li>
+	<strong>Como llegar y donde dormir:</strong>	
+		<li class="list-group-item">{{ $evento->llegar_dormir}}</li>
+	<strong>Contacto:</strong>
+		<li class="list-group-item">{{ $evento->contacto}}</li>
+	<strong>Inscriptos:</strong>
+        <li class="list-group-item">{{ $evento->inscripto}}</li>
+    <strong>Resultados:</strong>    
+        <li class="list-group-item">{{ $evento->resultado}}</li>
 </ul>
 		<a href="{{ route('event.edit', $evento->id) }}" class="btn btn-primary">Editar</a>
         <a href="{{route('event.index')}}" class="btn btn-primary pull-right">Listar</a>
