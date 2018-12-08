@@ -1,11 +1,12 @@
     <section id="contact">
-      <div class="container">
-        <h1>Formulario de contacto</h1>
+      <div class="container contacto">
+        <h1>Contacto</h1>
         <div class="row">
           <div class="col-sm-2">
             
           </div>
           <div class="col-sm-6">
+            @include('error')
             <form action="send" method="POST">
               {{ csrf_field() }}
               <div class="form-group">

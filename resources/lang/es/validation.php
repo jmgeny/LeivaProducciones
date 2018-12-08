@@ -97,11 +97,12 @@ return [
     |
     */
     'attributes' => [
-        'nombre' => 'Nombre del Evento',
+        'nombre' => 'El nombre',
         'fecha_inicio' => 'Fecha de Inicio',
         'fecha_fin' => 'Fecha de Fin',
         'championship_id' => 'Campeonato',
         'sport_id' => 'Deporte',
         'specification_id' => 'Distancia',
+        'to' => 'e-mail'
     ],
 ];

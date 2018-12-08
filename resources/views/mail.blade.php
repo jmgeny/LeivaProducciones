@@ -1,9 +1,10 @@
 @component('mail::message')
-# Introduction
+
+Mensaje de: {{ $nombrede }} {{ $apellidode }} <br>
 {{ $msg }}
 
 Responder a: {{ $mailde }}
 
-Thanks,<br>
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent

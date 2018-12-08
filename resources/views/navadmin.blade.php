@@ -10,7 +10,7 @@
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="{{ route('login') }}">Ingresar</a>
-        <a class="dropdown-item" href="{{ route('register') }}">Registrar</a>
+        {{-- <a class="dropdown-item" href="{{ route('register') }}">Registrar</a> --}}
       </div>
     </li>
 @else

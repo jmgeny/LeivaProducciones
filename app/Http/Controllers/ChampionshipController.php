@@ -52,12 +52,16 @@ class ChampionshipController extends Controller
 
         if ($request->file("avatar")) {
             
-            $folder = "public/img";
+            // $folder = "public/img";
+            $folder = "img";
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo
-            $name = $campeonato->fecha_inicio . "-campeonato." . $file->extension();
-            $path = $file->storePubliclyAs($folder, $name);
+            $name = $request->fecha_inicio . $request->nombre . "." . $file->extension();
+
+            $path = $file->storeAs($folder, $name);
+
+            // $path = $file->storePubliclyAs($folder, $name);
             // Puedo igual guardarlo en base de datos...
             $campeonato->avatar = $path;
         }
@@ -94,20 +98,26 @@ class ChampionshipController extends Controller
         $campeonato->fecha_inicio = $request->fecha_inicio;
         $campeonato->fecha_fin = $request->fecha_fin;        
 
+        $campeonato->save();
         // Necesito el archivo en una variable esta vez
         if ($request->file("avatar")) {
-            $folder = "public/img";
+
+            // $folder = "public/img";
+            $folder = "img";
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo
-            $name = $campeonato->fecha_inicio . "-campeonato." . $file->extension();
-            $path = $file->storePubliclyAs($folder, $name);
+            $name = $request->fecha_inicio . $request->nombre . "." . $file->extension();
+
+            $path = $file->storeAs($folder, $name);
+
+            // $path = $file->storePubliclyAs($folder, $name);
             // Puedo igual guardarlo en base de datos...
             $campeonato->avatar = $path;
+            
+            $campeonato->save();
         }
         
-        $campeonato->save();
-
        return redirect()->route('championship.index')
                         ->with('info','Fue creado un nuevo campeonato'); 
     }
