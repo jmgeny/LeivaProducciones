@@ -1,20 +1,20 @@
-      <div class="col-sm-6 col-md-4 col-lg-3 p-1">
+      <div>
         <a href="https://www.semanainternacionaldeltriatlon.com/" target="new">
-          <img src="{{ asset('img/sponsor/semanDelTriatlon.png') }}" class="rounded" alt="UAI">
+          <img src="{{ asset('img/sponsor/semanDelTriatlon.png') }}" class="rounded" alt="UAI" width="100%">
         </a>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 p-1">
+      <div>
         <a href="https://www.uai.edu.ar" target="new">
-          <img src="{{ asset('img/sponsor/UAI.png') }}" class="rounded" alt="UAI">
+          <img src="{{ asset('img/sponsor/UAI.png') }}" class="rounded" alt="UAI" width="100%">
         </a>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 p-1">
+      <div>
         <a href="https://www.facebook.com/www.leiman" target="new">
-          <img src="{{ asset('img/sponsor/leimanLogo.png') }}" class="rounded" alt="leimanLogo">
+          <img src="{{ asset('img/sponsor/leimanLogo.png') }}" class="rounded" alt="leimanLogo" width="100%">
         </a>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 p-1" style="vertical-align: middle">
+      <div>
         <a href="https://www.facebook.com/blancobikes-132208506868037/" target="new">
-          <img src="{{ asset('img/sponsor/blancoBike.png') }}" class="rounded" alt="blancoBike.png">
+          <img src="{{ asset('img/sponsor/blancoBike.png') }}" class="rounded" alt="blancoBike.png" width="100%">
         </a>
-      </div>    
+      </div>

@@ -27,7 +27,12 @@ Route::get('/allEventos', 'PrincipalController@allEventos');
 Route::get('/resultado/{id}', 'PrincipalController@resultado');
 Route::get('/allResultados', 'PrincipalController@allResultados');
 
-Route::resource('event','EventController');
-Route::resource('championship','ChampionshipController');
+Route::middleware('auth')->group(function() {
+	
+	Route::resource('event','EventController');
+	Route::resource('championship','ChampionshipController');
+	
+});
+
 
 Route::post('send','mailController@send');

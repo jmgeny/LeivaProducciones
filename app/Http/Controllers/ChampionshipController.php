@@ -50,25 +50,22 @@ class ChampionshipController extends Controller
         $campeonato->fecha_inicio = $request->fecha_inicio;
         $campeonato->fecha_fin = $request->fecha_fin;        
 
-        if ($request->file("avatar")) {
-            
-            // $folder = "public/img";
-            $folder = "img";
+        if($request->file('avatar')) {
+
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo
-            $name = $request->fecha_inicio . $request->nombre . "." . $file->extension();
+            $name = $request->nombre . $request->fecha . "." . $file->extension();
+            // carpeta en la que voy a guardar la imagen
+            $folder = "champion";
 
             $path = $file->storeAs($folder, $name);
-
-            // $path = $file->storePubliclyAs($folder, $name);
-            // Puedo igual guardarlo en base de datos...
-            $campeonato->avatar = $path;
+            $person->avatar = $path;
         }
 
         $campeonato->save();
 
-       return redirect()->route('championship.index')
+       return redirect()->back() //route('championship.index')
                         ->with('info','El campeonato fue Actualizado'); 
     }
 
@@ -98,25 +95,21 @@ class ChampionshipController extends Controller
         $campeonato->fecha_inicio = $request->fecha_inicio;
         $campeonato->fecha_fin = $request->fecha_fin;        
 
-        $campeonato->save();
         // Necesito el archivo en una variable esta vez
-        if ($request->file("avatar")) {
+        if($request->file('avatar')) {
 
-            // $folder = "public/img";
-            $folder = "img";
             // Necesito el archivo en una variable esta vez
             $file = $request->file("avatar");
             // Armo un nombre único para este archivo
-            $name = $request->fecha_inicio . $request->nombre . "." . $file->extension();
+            $name = $request->nombre . $request->fecha . "." . $file->extension();
+            // carpeta en la que voy a guardar la imagen
+            $folder = "champion";
 
             $path = $file->storeAs($folder, $name);
-
-            // $path = $file->storePubliclyAs($folder, $name);
-            // Puedo igual guardarlo en base de datos...
             $campeonato->avatar = $path;
-            
-            $campeonato->save();
         }
+        
+        $campeonato->save();
         
        return redirect()->route('championship.index')
                         ->with('info','Fue creado un nuevo campeonato'); 

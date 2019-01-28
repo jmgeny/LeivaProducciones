@@ -12,7 +12,8 @@
       </div>
       <div class="overlay"></div>
     </header>
-    <div class="row text-center carrousel bg-primary">
-      @include('carrusel')
+
+    <div class="row text-center bg-primary">  
+        @include('carrusel')
     </div>
 

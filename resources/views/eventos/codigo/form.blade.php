@@ -1,6 +1,7 @@
   <div class="form-group">
     {!! Form::label('championship_id', 'Campeonato') !!}
     {!! Form::select('championship_id',\leiman\Championship::orderBy('nombre')->pluck('nombre','id'),null,['class' => 'form-control']) !!}
+    <a href="{{ route('championship.create') }}" class="btn btn-primary">Nuevo Campeonato</a>
   </div>
 
   <div class="form-group">
@@ -43,22 +44,22 @@
   </div>
 
   <div class="form-group">
-    {!! Form::label('direccion', 'Direccion') !!}
+    {!! Form::label('direccion', 'Direccion del evento') !!}
     {!! Form::text('direccion', null, ['class'=> 'form-control']) !!}
   </div>
 
   <div class="form-group">
-    {!! Form::label('llegar_dormir', 'Datos de Interes') !!}
+    {!! Form::label('llegar_dormir', 'Como llegar y donde dormir') !!}
     {!! Form::textarea('llegar_dormir', null, ['class'=> 'form-control']) !!}
   </div>
 
   <div class="form-group">
-    {!! Form::label('inscripcion', 'Inscripción') !!}
+    {!! Form::label('inscripcion', 'link Inscripción') !!}
     {!! Form::text('inscripcion', null, ['class'=> 'form-control']) !!}
   </div>
 
   <div class="form-group">
-    {!! Form::label('contacto', 'Contacto') !!}
+    {!! Form::label('contacto', 'e-mail Contacto') !!}
     {!! Form::text('contacto', null, ['class'=> 'form-control']) !!}
   </div>
 

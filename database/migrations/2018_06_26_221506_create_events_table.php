@@ -18,14 +18,15 @@ class CreateEventsTable extends Migration
 
             $table->string('nombre');// ## Portada
             $table->date('fecha');// ## Portada
-            $table->integer('city_id')->nullable();// ## Portada
 
             $table->string('inscripto')->nullable();// ## Evento
             $table->string('resultado')->nullable();// ## Evento
             
-            $table->integer('championship_id');// ## Evento
+            $table->unsignedInteger('championship_id');// ## Evento
+            $table->integer('city_id')->nullable();// ## Portada
             $table->integer('sport_id')->nullable();// ## Evento
             $table->integer('specification_id')->nullable();// ## Evento
+
             $table->text('descripcion')->nullable();// ## Evento 
             $table->text('cronograma')->nullable();// ## Evento
 
@@ -34,8 +35,12 @@ class CreateEventsTable extends Migration
 
             $table->text('contacto')->nullable();// Contacto
             $table->string('inscripcion')->nullable();// Contacto
-                        
+
             $table->timestamps();
+
+            $table->foreign('championship_id')->references('id')->on('championships');
+
+
         });
     }
 

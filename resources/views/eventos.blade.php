@@ -1,7 +1,6 @@
     <section class="content-section" id="evento">
       <div class="container">
         <div class="content-section-heading text-center">
-          {{-- {{ url('/allEventos') }} --}}
           <a href="{{ url('/allEventos') }}"><h2 class="mb-5">Proximos Eventos</h2></a>
         </div>
         <div class="row no-gutters">
@@ -15,7 +14,7 @@
                   <p class="spanCaption">Inscribite</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{{ Storage::url($evento->championship->avatar) }}" alt="">
+              <img class="img-fluid" src="{{ Storage::url($evento->championship->avatar) }}" alt="{{ $evento->city->nombre }}"> 
             </a>
           </div>
           @endforeach

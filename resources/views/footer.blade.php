@@ -2,6 +2,6 @@
     <footer class="footer text-center">
       <div class="container">
         @include('redes')
-        <p class="text-muted small mb-0">Copyright &copy; 2018</p>
+        <a href="mailto:juanmanuel.geny@gmail.com">Desarrollado Por</a>
       </div>
     </footer>    

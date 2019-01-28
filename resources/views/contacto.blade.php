@@ -1,6 +1,6 @@
     <section id="contact">
       <div class="container contacto">
-        <h1>Contacto</h1>
+        <h1 class="text-center">Contacto</h1>
         <div class="row">
           <div class="col-sm-2">
             
